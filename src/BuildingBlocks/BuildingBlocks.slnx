@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Otex.BuildingBlocks.Domain/Otex.BuildingBlocks.Domain.csproj" />
+  <Project Path="Otex.BuildingBlocks.ServiceDefaults/Otex.BuildingBlocks.ServiceDefaults.csproj" />
+</Solution>

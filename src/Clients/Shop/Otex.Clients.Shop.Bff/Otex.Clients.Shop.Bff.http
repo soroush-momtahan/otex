@@ -1,0 +1,6 @@
+@Otex.Clients.Shop.Bff_HostAddress = http://localhost:5236
+
+GET {{Otex.Clients.Shop.Bff_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

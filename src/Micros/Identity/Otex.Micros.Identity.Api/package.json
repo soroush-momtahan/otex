@@ -1,0 +1,18 @@
+{
+  "name": "otex.micros.identity.api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "npx tailwindcss -i ./Styles/app.css -o ./wwwroot/css/app.css",
+    "watch:css": "npx tailwindcss -i ./Styles/app.css -o ./wwwroot/css/app.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.2",
+    "tailwindcss": "^4.3.2"
+  }
+}

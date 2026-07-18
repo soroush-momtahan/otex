@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="Otex.Clients.Shop.Angular/Otex.Clients.Shop.Angular.esproj">
+    <BuildType Project="Debug" />
+    <Build />
+  </Project>
+  <Project Path="Otex.Clients.Shop.Bff/Otex.Clients.Shop.Bff.csproj" />
+</Solution>

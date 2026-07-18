@@ -1,0 +1,12 @@
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.ServiceDefaults\bin\Debug\net10.0\Otex.BuildingBlocks.ServiceDefaults.deps.json
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.ServiceDefaults\bin\Debug\net10.0\Otex.BuildingBlocks.ServiceDefaults.dll
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.ServiceDefaults\bin\Debug\net10.0\Otex.BuildingBlocks.ServiceDefaults.pdb
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.ServiceDefaults\obj\Debug\net10.0\Otex.BuildingBlocks.ServiceDefaults.csproj.AssemblyReference.cache
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.ServiceDefaults\obj\Debug\net10.0\Otex.BuildingBlocks.ServiceDefaults.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.ServiceDefaults\obj\Debug\net10.0\Otex.BuildingBlocks.ServiceDefaults.AssemblyInfoInputs.cache
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.ServiceDefaults\obj\Debug\net10.0\Otex.BuildingBlocks.ServiceDefaults.AssemblyInfo.cs
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.ServiceDefaults\obj\Debug\net10.0\Otex.BuildingBlocks.ServiceDefaults.csproj.CoreCompileInputs.cache
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.ServiceDefaults\obj\Debug\net10.0\Otex.BuildingBlocks.ServiceDefaults.dll
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.ServiceDefaults\obj\Debug\net10.0\refint\Otex.BuildingBlocks.ServiceDefaults.dll
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.ServiceDefaults\obj\Debug\net10.0\Otex.BuildingBlocks.ServiceDefaults.pdb
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.ServiceDefaults\obj\Debug\net10.0\ref\Otex.BuildingBlocks.ServiceDefaults.dll

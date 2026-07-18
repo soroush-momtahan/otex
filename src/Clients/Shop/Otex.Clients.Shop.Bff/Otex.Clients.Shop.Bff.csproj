@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <!--new-line-->
+        <SpaRoot>..\Otex.Clients.Shop.Angular</SpaRoot>
+        <SpaProxyLaunchCommand>npm start</SpaProxyLaunchCommand>
+        <SpaProxyServerUrl>https://localhost:4200</SpaProxyServerUrl>
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\BuildingBlocks\Otex.BuildingBlocks.ServiceDefaults\Otex.BuildingBlocks.ServiceDefaults.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Duende.BFF.Yarp" Version="4.2.0" />
+        <PackageReference Include="Microsoft.AspNetCore.SpaProxy" Version="10.0.9" />
+        <!--new-->
+        <ProjectReference Include="..\Otex.Clients.Shop.Angular\Otex.Clients.Shop.Angular.esproj">
+            <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+        </ProjectReference>
+    </ItemGroup>
+
+</Project>

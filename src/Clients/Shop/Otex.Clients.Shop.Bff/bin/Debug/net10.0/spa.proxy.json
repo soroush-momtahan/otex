@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:4200",
+"RedirectUrl": "",
+"LaunchCommand": "npm start",
+"WorkingDirectory": "C:\\Users\\Soroush\\Documents\\Code\\01 - projects\\otex\\src\\Clients\\Shop\\Otex.Clients.Shop.Bff\\..\\Otex.Clients.Shop.Angular",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}

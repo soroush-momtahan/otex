@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>Otex.Micros.Identity.Api</RootNamespace>
+    </PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\BuildingBlocks\Otex.BuildingBlocks.ServiceDefaults\Otex.BuildingBlocks.ServiceDefaults.csproj"/>
+	</ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Aspire.Npgsql.EntityFrameworkCore.PostgreSQL" Version="13.4.6" />
+        <PackageReference Include="Duende.IdentityServer.AspNetIdentity" Version="8.0.2" />
+        <PackageReference Include="Duende.IdentityServer.EntityFramework" Version="8.0.2" />
+        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="10.0.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="10.0.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="10.0.1" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.1">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Serilog.AspNetCore" Version="10.0.0" />
+        <PackageReference Include="System.Security.Cryptography.Xml" Version="10.0.9" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Data\Migrations\AspMigration\" />
+      <Folder Include="Data\Migrations\DuendeConfigMigration\" />
+      <Folder Include="Data\Migrations\DuendePersisMigration\" />
+    </ItemGroup>
+</Project>
