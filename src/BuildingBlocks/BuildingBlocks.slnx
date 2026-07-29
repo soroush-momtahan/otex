@@ -1,4 +1,8 @@
 <Solution>
+  <Project Path="Otex.BuildingBlocks.Api/Otex.BuildingBlocks.Api.csproj" />
+  <Project Path="Otex.BuildingBlocks.Application/Otex.BuildingBlocks.Application.csproj" />
   <Project Path="Otex.BuildingBlocks.Domain/Otex.BuildingBlocks.Domain.csproj" />
+  <Project Path="Otex.BuildingBlocks.Infrastructure/Otex.BuildingBlocks.Infrastructure.csproj" />
+  <Project Path="Otex.BuildingBlocks.Presentation/Otex.BuildingBlocks.Presentation.csproj" />
   <Project Path="Otex.BuildingBlocks.ServiceDefaults/Otex.BuildingBlocks.ServiceDefaults.csproj" />
 </Solution>

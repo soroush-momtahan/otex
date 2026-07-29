@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Otex.Clients.Shop.Bff")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7c6ff48295e90327a3ab7691c180143a64f2b272")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+22fb8e20f79a77c57919f1744d538ca37e60aab3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Otex.Clients.Shop.Bff")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Otex.Clients.Shop.Bff")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
