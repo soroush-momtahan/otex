@@ -1,0 +1,25 @@
+﻿using Otex.BuildingBlocks.Domain.Results;
+using Otex.Micros.Applicants.Domain.Cooperation.Errors;
+
+namespace Otex.Micros.Applicants.Domain.Cooperation.ValueObjects;
+
+public record Mobile
+{
+    private const int ValidLenght = 11;
+    public string Value { get; init; }
+    private Mobile() {}
+
+    public static Result<Mobile> From(string mobile)
+    {
+        mobile = mobile.Trim();
+        if (string.IsNullOrWhiteSpace(mobile) || mobile.Length != ValidLenght)
+        {
+            return Result.Failure<Mobile>(CooperationErrors.MobileNotValid);
+        }
+
+        return new Mobile()
+        {
+            Value = mobile
+        };
+    }
+}

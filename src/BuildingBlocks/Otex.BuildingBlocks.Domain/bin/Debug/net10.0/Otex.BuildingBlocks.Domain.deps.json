@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Otex.BuildingBlocks.Domain/1.0.0": {
+        "runtime": {
+          "Otex.BuildingBlocks.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Otex.BuildingBlocks.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

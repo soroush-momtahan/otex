@@ -6,6 +6,7 @@ C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.Build
 C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.ServiceDefaults\obj\Debug\net10.0\Otex.BuildingBlocks.ServiceDefaults.AssemblyInfoInputs.cache
 C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.ServiceDefaults\obj\Debug\net10.0\Otex.BuildingBlocks.ServiceDefaults.AssemblyInfo.cs
 C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.ServiceDefaults\obj\Debug\net10.0\Otex.BuildingBlocks.ServiceDefaults.csproj.CoreCompileInputs.cache
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.ServiceDefaults\obj\Debug\net10.0\Otex.BuildingBlocks.ServiceDefaults.sourcelink.json
 C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.ServiceDefaults\obj\Debug\net10.0\Otex.BuildingBlocks.ServiceDefaults.dll
 C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.ServiceDefaults\obj\Debug\net10.0\refint\Otex.BuildingBlocks.ServiceDefaults.dll
 C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.ServiceDefaults\obj\Debug\net10.0\Otex.BuildingBlocks.ServiceDefaults.pdb

@@ -1,0 +1,16 @@
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.Application\bin\Debug\net10.0\Otex.BuildingBlocks.Application.deps.json
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.Application\bin\Debug\net10.0\Otex.BuildingBlocks.Application.dll
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.Application\bin\Debug\net10.0\Otex.BuildingBlocks.Application.pdb
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.Application\bin\Debug\net10.0\Otex.BuildingBlocks.Domain.dll
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.Application\bin\Debug\net10.0\Otex.BuildingBlocks.Domain.pdb
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.Application\obj\Debug\net10.0\Otex.BuildingBlocks.Application.csproj.AssemblyReference.cache
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.Application\obj\Debug\net10.0\Otex.BuildingBlocks.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.Application\obj\Debug\net10.0\Otex.BuildingBlocks.Application.AssemblyInfoInputs.cache
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.Application\obj\Debug\net10.0\Otex.BuildingBlocks.Application.AssemblyInfo.cs
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.Application\obj\Debug\net10.0\Otex.BuildingBlocks.Application.csproj.CoreCompileInputs.cache
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.Application\obj\Debug\net10.0\Otex.BuildingBlocks.Application.sourcelink.json
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.Application\obj\Debug\net10.0\Otex.Bui.F8502AF0.Up2Date
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.Application\obj\Debug\net10.0\Otex.BuildingBlocks.Application.dll
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.Application\obj\Debug\net10.0\refint\Otex.BuildingBlocks.Application.dll
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.Application\obj\Debug\net10.0\Otex.BuildingBlocks.Application.pdb
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.Application\obj\Debug\net10.0\ref\Otex.BuildingBlocks.Application.dll

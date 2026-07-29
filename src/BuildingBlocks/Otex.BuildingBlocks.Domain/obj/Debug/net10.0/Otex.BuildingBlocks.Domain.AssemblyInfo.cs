@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Otex.BuildingBlocks.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+22fb8e20f79a77c57919f1744d538ca37e60aab3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8466d03e0c82431ae0297748b397f5dcfa13a725")]
 [assembly: System.Reflection.AssemblyProductAttribute("Otex.BuildingBlocks.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Otex.BuildingBlocks.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

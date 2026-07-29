@@ -49,6 +49,21 @@ public class Result
         // (این فرض می‌کند که کلاس Error شما می‌تواند چندین خطا را مدیریت کند)
         return Failure(Error.Combine(errors.ToArray()));
     }
+    public static Result<TValue> Combine<TValue>(List<Result<TValue>> results)
+    {
+        // تمام نتایج شکست خورده را پیدا کن
+        var errors = results.Where(r => r.IsFailure).Select(r => r.Error).ToList();
+
+        // اگر هیچ خطایی وجود نداشت، نتیجه موفقیت آمیز است
+        if (errors.Count == 0)
+        {
+            return Success<TValue>(results[0].Value);
+        }
+
+        // اگر خطا وجود داشت، آنها را در یک خطای واحد ترکیب کن
+        // (این فرض می‌کند که کلاس Error شما می‌تواند چندین خطا را مدیریت کند)
+        return Failure<TValue>(Error.Combine(errors.ToArray()));
+    }
 }
 
 public class Result<TValue> : Result

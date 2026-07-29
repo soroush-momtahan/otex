@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/JwhxuwEchI=",
+  "dgSpecHash": "UhLZgpm/wzs=",
   "success": true,
   "projectFilePath": "C:\\Users\\Soroush\\Documents\\Code\\01 - projects\\otex\\src\\BuildingBlocks\\Otex.BuildingBlocks.Infrastructure\\Otex.BuildingBlocks.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -120,7 +120,6 @@
     "C:\\Users\\Soroush\\.nuget\\packages\\system.composition.typedparts\\9.0.0\\system.composition.typedparts.9.0.0.nupkg.sha512",
     "C:\\Users\\Soroush\\.nuget\\packages\\system.identitymodel.tokens.jwt\\8.0.1\\system.identitymodel.tokens.jwt.8.0.1.nupkg.sha512",
     "C:\\Users\\Soroush\\.nuget\\packages\\system.io.hashing\\10.0.8\\system.io.hashing.10.0.8.nupkg.sha512",
-    "C:\\Users\\Soroush\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512",
     "C:\\Users\\Soroush\\.nuget\\packages\\system.security.cryptography.pkcs\\10.0.10\\system.security.cryptography.pkcs.10.0.10.nupkg.sha512",
     "C:\\Users\\Soroush\\.nuget\\packages\\system.security.cryptography.xml\\10.0.10\\system.security.cryptography.xml.10.0.10.nupkg.sha512",
     "C:\\Users\\Soroush\\.nuget\\packages\\system.threading.ratelimiting\\8.0.0\\system.threading.ratelimiting.8.0.0.nupkg.sha512"

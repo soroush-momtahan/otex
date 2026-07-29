@@ -1,0 +1,12 @@
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.Domain\bin\Debug\net10.0\Otex.BuildingBlocks.Domain.deps.json
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.Domain\bin\Debug\net10.0\Otex.BuildingBlocks.Domain.dll
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.Domain\bin\Debug\net10.0\Otex.BuildingBlocks.Domain.pdb
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.Domain\obj\Debug\net10.0\Otex.BuildingBlocks.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.Domain\obj\Debug\net10.0\Otex.BuildingBlocks.Domain.AssemblyInfoInputs.cache
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.Domain\obj\Debug\net10.0\Otex.BuildingBlocks.Domain.AssemblyInfo.cs
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.Domain\obj\Debug\net10.0\Otex.BuildingBlocks.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.Domain\obj\Debug\net10.0\Otex.BuildingBlocks.Domain.sourcelink.json
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.Domain\obj\Debug\net10.0\Otex.BuildingBlocks.Domain.dll
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.Domain\obj\Debug\net10.0\refint\Otex.BuildingBlocks.Domain.dll
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.Domain\obj\Debug\net10.0\Otex.BuildingBlocks.Domain.pdb
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\BuildingBlocks\Otex.BuildingBlocks.Domain\obj\Debug\net10.0\ref\Otex.BuildingBlocks.Domain.dll

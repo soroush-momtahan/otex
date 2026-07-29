@@ -2,6 +2,7 @@
 
 public enum IdType
 {
+    Cooperation,
     Adr,
     PrdVar,
     Cat,
