@@ -5,7 +5,7 @@ namespace Otex.Micros.Applicants.Domain.Cooperation.ValueObjects;
 
 public record Mobile
 {
-    private const int ValidLenght = 11;
+    public const int ValidLenght = 11;
     public string Value { get; init; }
     private Mobile() {}
 

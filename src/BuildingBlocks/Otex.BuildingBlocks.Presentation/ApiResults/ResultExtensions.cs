@@ -1,4 +1,4 @@
-﻿namespace Otex.Services.Shared.Presentation.ApiResults;
+﻿namespace Otex.BuildingBlocks.Presentation.ApiResults;
 
 public static class ResultExtensions
 {

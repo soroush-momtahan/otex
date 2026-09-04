@@ -4,5 +4,6 @@
   <Project Path="Otex.BuildingBlocks.Domain/Otex.BuildingBlocks.Domain.csproj" />
   <Project Path="Otex.BuildingBlocks.Infrastructure/Otex.BuildingBlocks.Infrastructure.csproj" />
   <Project Path="Otex.BuildingBlocks.Presentation/Otex.BuildingBlocks.Presentation.csproj" />
+  <Project Path="Otex.BuildingBlocks.Razor/Otex.BuildingBlocks.Razor.csproj" />
   <Project Path="Otex.BuildingBlocks.ServiceDefaults/Otex.BuildingBlocks.ServiceDefaults.csproj" />
 </Solution>

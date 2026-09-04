@@ -1,3 +1,10 @@
 <Solution>
   <Project Path="Otex.Micros.Identity.Api/Otex.Micros.Identity.Api.csproj" />
+  <Project Path="Otex.Micros.Identity.Application/Otex.Micros.Identity.Application.csproj" />
+  <Project Path="Otex.Micros.Identity.Domain/Otex.Micros.Identity.Domain.csproj" />
+  <Project Path="Otex.Micros.Identity.Hosting/Otex.Micros.Identity.Hosting.csproj" />
+  <Project Path="Otex.Micros.Identity.Infrastructure/Otex.Micros.Identity.Infrastructure.csproj" />
+  <Project Path="Otex.Micros.Identity.Migrator/Otex.Micros.Identity.Migrator.csproj" />
+  <Project Path="Otex.Micros.Identity.Orchestration/Otex.Micros.Identity.Orchestration.csproj" />
+  <Project Path="Otex.Micros.Identity.Ui/Otex.Micros.Identity.Ui.csproj" />
 </Solution>

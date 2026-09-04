@@ -1,0 +1,6 @@
+﻿@model ProductListViewModel
+
+@foreach (var product in Model.Data)
+{
+    <vc:product-card product-dto="product" is-liked="false"/>
+}

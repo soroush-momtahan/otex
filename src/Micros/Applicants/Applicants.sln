@@ -2,6 +2,16 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Otex.Micros.Applicants.Domain", "Otex.Micros.Applicants.Domain\Otex.Micros.Applicants.Domain.csproj", "{7E07C27F-9998-4D70-9B78-30D5CAA6BAE2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Otex.Micros.Applicants.Application", "Otex.Micros.Applicants.Application\Otex.Micros.Applicants.Application.csproj", "{33F4346B-C272-4329-8CC8-7BF4364D02ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Otex.Micros.Applicants.Infrastructure", "Otex.Micros.Applicants.Infrastructure\Otex.Micros.Applicants.Infrastructure.csproj", "{A0BCA87D-5505-4C11-BE06-36AE24BA9377}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Otex.Micros.Applicants.Presentation", "Otex.Micros.Applicants.Presentation\Otex.Micros.Applicants.Presentation.csproj", "{D9F4C8CF-8BF1-4131-A219-1E9E6978EE70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Otex.Micros.Applicant.Api", "Otex.Micros.Applicant.Api\Otex.Micros.Applicant.Api.csproj", "{45AE5405-C5C8-4ADB-B874-16CF56984876}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Otex.Micros.Applicants.Migrator", "Otex.Micros.Applicants.Migrator\Otex.Micros.Applicants.Migrator.csproj", "{ED6B07CA-7E43-438D-A347-024C47E34967}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +22,25 @@ Global
 		{7E07C27F-9998-4D70-9B78-30D5CAA6BAE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E07C27F-9998-4D70-9B78-30D5CAA6BAE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E07C27F-9998-4D70-9B78-30D5CAA6BAE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33F4346B-C272-4329-8CC8-7BF4364D02ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33F4346B-C272-4329-8CC8-7BF4364D02ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33F4346B-C272-4329-8CC8-7BF4364D02ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33F4346B-C272-4329-8CC8-7BF4364D02ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0BCA87D-5505-4C11-BE06-36AE24BA9377}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0BCA87D-5505-4C11-BE06-36AE24BA9377}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0BCA87D-5505-4C11-BE06-36AE24BA9377}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0BCA87D-5505-4C11-BE06-36AE24BA9377}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9F4C8CF-8BF1-4131-A219-1E9E6978EE70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9F4C8CF-8BF1-4131-A219-1E9E6978EE70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9F4C8CF-8BF1-4131-A219-1E9E6978EE70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9F4C8CF-8BF1-4131-A219-1E9E6978EE70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45AE5405-C5C8-4ADB-B874-16CF56984876}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45AE5405-C5C8-4ADB-B874-16CF56984876}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45AE5405-C5C8-4ADB-B874-16CF56984876}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45AE5405-C5C8-4ADB-B874-16CF56984876}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED6B07CA-7E43-438D-A347-024C47E34967}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED6B07CA-7E43-438D-A347-024C47E34967}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED6B07CA-7E43-438D-A347-024C47E34967}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED6B07CA-7E43-438D-A347-024C47E34967}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

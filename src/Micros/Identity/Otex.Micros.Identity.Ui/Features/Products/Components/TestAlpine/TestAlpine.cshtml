@@ -1,0 +1,43 @@
+@page
+@model TestAlpineViewModel
+@{
+    // اینجا متغیرهای C# ما هستند
+    var modalTitle = "پیام سیستم";
+    var successMessage = "Alpine.js با موفقیت در پروژه شما نصب شد! 🚀";
+}
+
+<!-- x-data محدوده Alpine را تعریف می‌کند (اینجا متغیر isOpen رو داریم) -->
+<div class="p-8" x-data="{ isOpen: false }">
+
+    <h2>تست یکپارچگی Razor و Alpine</h2>
+    
+    <!-- به جای @@click از x-on:click استفاده کردیم (بدون تداخل با Razor) -->
+    <button class="bg-blue-500 text-white px-4 py-2 rounded"
+            x-on:click="isOpen = true">
+        باز کردن مودال
+    </button>
+
+    <!-- مودال (فقط زمانی نمایش داده می‌شود که isOpen مساوی true باشد) -->
+    <!-- x-show ظاهر شدن المنت را کنترل می‌کند -->
+    <!-- x-cloak از چشمک زدن مودال قبل از لود شدن Alpine جلوگیری می‌کند -->
+    <div x-show="isOpen" 
+         x-cloak
+         class="fixed inset-0 bg-black/50 flex items-center justify-center">
+         
+        <div class="bg-white p-6 rounded-lg w-96 shadow-xl"
+             x-on:click.outside="isOpen = false"> <!-- با کلیک بیرون مودال بسته میشه! جادوی Alpine -->
+            
+            <!-- ترکیب یکپارچه C# و HTML در درون Alpine -->
+            <h3 class="text-xl font-bold mb-4">@modalTitle</h3>
+            
+            <p class="text-gray-700 mb-6">@successMessage</p>
+            
+            <button class="bg-red-500 text-white px-4 py-2 rounded w-full"
+                    x-on:click="isOpen = false">
+                بستن
+            </button>
+        </div>
+        
+    </div>
+
+</div>

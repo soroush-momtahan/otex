@@ -17,6 +17,8 @@
     <ItemGroup>
         <ProjectReference Include="..\..\Micros\Identity\Otex.Micros.Identity.Api\Otex.Micros.Identity.Api.csproj"/>
         <ProjectReference Include="..\..\Clients\Shop\Otex.Clients.Shop.Bff\Otex.Clients.Shop.Bff.csproj"/>
+        <ProjectReference Include="..\..\Micros\Applicants\Otex.Micros.Applicant.Api\Otex.Micros.Applicant.Api.csproj"/>
+        <ProjectReference Include="..\..\Micros\Applicants\Otex.Micros.Applicants.Migrator\Otex.Micros.Applicants.Migrator.csproj"/>
     </ItemGroup>
 
 </Project>

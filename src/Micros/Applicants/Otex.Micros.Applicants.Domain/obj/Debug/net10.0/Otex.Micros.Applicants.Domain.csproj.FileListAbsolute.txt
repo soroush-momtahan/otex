@@ -1,0 +1,16 @@
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Applicants\Otex.Micros.Applicants.Domain\bin\Debug\net10.0\Otex.Micros.Applicants.Domain.deps.json
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Applicants\Otex.Micros.Applicants.Domain\bin\Debug\net10.0\Otex.Micros.Applicants.Domain.dll
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Applicants\Otex.Micros.Applicants.Domain\bin\Debug\net10.0\Otex.Micros.Applicants.Domain.pdb
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Applicants\Otex.Micros.Applicants.Domain\bin\Debug\net10.0\Otex.BuildingBlocks.Domain.dll
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Applicants\Otex.Micros.Applicants.Domain\bin\Debug\net10.0\Otex.BuildingBlocks.Domain.pdb
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Applicants\Otex.Micros.Applicants.Domain\obj\Debug\net10.0\Otex.Micros.Applicants.Domain.csproj.AssemblyReference.cache
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Applicants\Otex.Micros.Applicants.Domain\obj\Debug\net10.0\Otex.Micros.Applicants.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Applicants\Otex.Micros.Applicants.Domain\obj\Debug\net10.0\Otex.Micros.Applicants.Domain.AssemblyInfoInputs.cache
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Applicants\Otex.Micros.Applicants.Domain\obj\Debug\net10.0\Otex.Micros.Applicants.Domain.AssemblyInfo.cs
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Applicants\Otex.Micros.Applicants.Domain\obj\Debug\net10.0\Otex.Micros.Applicants.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Applicants\Otex.Micros.Applicants.Domain\obj\Debug\net10.0\Otex.Micros.Applicants.Domain.sourcelink.json
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Applicants\Otex.Micros.Applicants.Domain\obj\Debug\net10.0\Otex.Mic.72E0D372.Up2Date
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Applicants\Otex.Micros.Applicants.Domain\obj\Debug\net10.0\Otex.Micros.Applicants.Domain.dll
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Applicants\Otex.Micros.Applicants.Domain\obj\Debug\net10.0\refint\Otex.Micros.Applicants.Domain.dll
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Applicants\Otex.Micros.Applicants.Domain\obj\Debug\net10.0\Otex.Micros.Applicants.Domain.pdb
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Applicants\Otex.Micros.Applicants.Domain\obj\Debug\net10.0\ref\Otex.Micros.Applicants.Domain.dll

@@ -14,5 +14,7 @@ public enum IdType
     CstGrp,
     Rgn,
     VarPrc,
-    OpClsr
+    OpClsr,
+    Usr,
+    Idntt
 }

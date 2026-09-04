@@ -1,0 +1,133 @@
+﻿@* @using System.Text.Json *@
+@* @using Otex.Micros.Identity.Ui.Features.Login.Enums *@
+@* @model LoginViewModel *@
+@* *@
+@* @{ *@
+@*     var jsonViewModel = JsonSerializer.Serialize(Model, new JsonSerializerOptions { PropertyNamingPolicy = null }); *@
+@* } *@
+@* *@
+@* <div x-data="Login(@jsonViewModel)" class="flex flex-col items-center w-full"> *@
+@* *@
+@*     <input type="hidden" name="OtpCode" x-bind:value="digits.join('')"/> *@
+@*     <button x-ref="autoSubmitBtn" type="submit" name="Action" value="@SignOnAction.SubmitOtp" class="hidden"></button> *@
+@* *@
+@*     <!-- کادرهای ورود کد OTP --> *@
+@*     <div class="w-full mb-8 mt-2"> *@
+@*         <div class="flex justify-between gap-2 sm:gap-3" dir="ltr"> *@
+@*             <template x-for="(digit, index) in digits" :key="index"> *@
+@*                 <div class="relative w-12 h-14 sm:w-14 sm:h-16"> *@
+@*                     <!-- خط زیرین انیمیشنی برای حس پرمیوم --> *@
+@*                     <div class="absolute inset-0 bg-black rounded-xl translate-y-1 opacity-0 transition-opacity duration-300"  *@
+@*                          x-bind:class="{ 'opacity-10': digits[index] !== '' }"></div> *@
+@*                           *@
+@*                     <input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1" *@
+@*                            x-model="digits[index]" *@
+@*                            x-on:input="handleInput(index, $event)" *@
+@*                            x-on:keydown.backspace="handleBackspace(index, $event)" *@
+@*                            x-on:paste="handlePaste($event)" *@
+@*                            x-bind:class="{ 'border-black bg-white shadow-md -translate-y-1': digits[index] !== '' }" *@
+@*                            class="relative z-10 w-full h-full text-center text-2xl font-black bg-gray-50 border-2 border-transparent rounded-xl focus:bg-white focus:border-black focus:shadow-[0_8px_30px_rgb(0,0,0,0.12)] focus:-translate-y-1 transition-all duration-300 ease-out selection:bg-black selection:text-white caret-black outline-none placeholder-gray-300" /> *@
+@*                 </div> *@
+@*             </template> *@
+@*         </div> *@
+@*     </div> *@
+@* *@
+@*     <!-- تایمر پیشرفته (Progress Bar) و دکمه‌ها --> *@
+@*     <div class="w-full bg-white border border-gray-100 shadow-sm rounded-2xl p-4 flex flex-col gap-3"> *@
+@*          *@
+@*         <div class="flex items-center justify-between text-sm font-bold"> *@
+@*             <button type="submit" formnovalidate name="Action" value="@SignOnAction.Back" *@
+@*                     class="text-gray-400 hover:text-black transition-colors duration-300"> *@
+@*                 تغییر شماره *@
+@*             </button> *@
+@* *@
+@*             <!-- تایمر عددی --> *@
+@*             <div x-show="timeLeft > 0" class="flex items-center gap-2 font-mono text-black"> *@
+@*                 <span x-text="formattedTime" class="tracking-widest text-lg"></span> *@
+@*             </div> *@
+@* *@
+@*             <!-- دکمه ارسال مجدد (با انیمیشن ورود) --> *@
+@*             <button x-show="timeLeft === 0" *@
+@*                     x-cloak *@
+@*                     x-transition:enter="transition ease-out duration-300" *@
+@*                     x-transition:enter-start="opacity-0 scale-90" *@
+@*                     x-transition:enter-end="opacity-100 scale-100" *@
+@*                     type="submit" name="Action" value="@SignOnAction.ResendOtp" *@
+@*                     class="flex items-center gap-2 text-white bg-black hover:bg-gray-800 px-4 py-1.5 rounded-xl transition-all shadow-lg active:scale-95"> *@
+@*                 ارسال مجدد *@
+@*                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"> *@
+@*                     <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"/> *@
+@*                 </svg> *@
+@*             </button> *@
+@*         </div> *@
+@* *@
+@*         <!-- نوار پیشرفت تایمر (Industrial Loader) --> *@
+@*         <div class="w-full h-1 bg-gray-100 rounded-full overflow-hidden" x-show="timeLeft > 0"> *@
+@*             <div class="h-full bg-black transition-all duration-1000 ease-linear rounded-full"  *@
+@*                  x-bind:style="`width: ${progressPercentage}%`"></div> *@
+@*         </div> *@
+@*     </div> *@
+@* </div> *@
+
+@using System.Text.Json
+@using Otex.Micros.Identity.Ui.Features.Login.Enums
+@model LoginViewModel
+
+@{
+    var jsonViewModel = JsonSerializer.Serialize(Model, new JsonSerializerOptions { PropertyNamingPolicy = null });
+}
+
+<div x-data="Login(@jsonViewModel)" class="flex flex-col items-center w-full">
+
+    <input type="hidden" name="OtpCode" x-bind:value="digits.join('')"/>
+    <button x-ref="autoSubmitBtn" type="submit" name="Action" value="@SignOnAction.SubmitOtp" class="hidden"></button>
+
+    <!-- کادرهای ورود کد OTP کاملاً هماهنگ با اینپوت‌های سیستم -->
+    <div class="w-full mb-8">
+        <div class="flex justify-between gap-2 sm:gap-3 md:gap-4" dir="ltr">
+            <template x-for="(digit, index) in digits" :key="index">
+                <div class="relative flex-1 max-w-[64px]">
+                    <input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1"
+                           x-model="digits[index]"
+                           x-on:input="handleInput(index, $event)"
+                           x-on:keydown.backspace="handleBackspace(index, $event)"
+                           x-on:paste="handlePaste($event)"
+                           x-bind:class="digits[index] !== '' ? 'border-blue-500 bg-blue-50/30' : 'border-gray-200 bg-white'"
+                           class="w-full h-14 md:h-16 text-center text-2xl font-black text-gray-800 border rounded-2xl focus:border-blue-500 focus:ring-4 focus:ring-blue-500/20 transition-all duration-300 shadow-sm outline-none caret-blue-500" />
+                </div>
+            </template>
+        </div>
+    </div>
+
+    <!-- بخش پایین: دکمه تغییر شماره، تایمر و ارسال مجدد -->
+    <div class="w-full flex items-center justify-between mt-2">
+        
+        <!-- دکمه تغییر شماره کاملاً مشابه استایل دکمه Back شما -->
+        <button type="submit" formnovalidate name="Action" value="@SignOnAction.Back"
+                class="h-12 md:h-14 px-4 bg-gray-100 text-gray-700 font-bold rounded-2xl hover:bg-gray-200 transition-all active:scale-95">
+            تغییر شماره
+        </button>
+
+        <!-- نمایش تایمر با فونت استاندارد پروژه -->
+        <div x-show="timeLeft > 0" class="flex items-center gap-2 text-gray-500 font-bold h-12 md:h-14 px-4 border border-gray-200 bg-gray-50 rounded-2xl shadow-sm">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span x-text="formattedTime" class="tracking-widest text-lg dir-ltr inline-block"></span>
+        </div>
+
+        <!-- دکمه ارسال مجدد با استایل دکمه‌های Primary شما (#0A102E) -->
+        <button x-show="timeLeft === 0"
+                x-cloak
+                x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0 scale-90"
+                x-transition:enter-end="opacity-100 scale-100"
+                type="submit" name="Action" value="@SignOnAction.ResendOtp"
+                class="flex items-center gap-2 h-12 md:h-14 px-6 bg-[#0A102E] text-white font-bold rounded-2xl shadow-lg hover:bg-gray-900 transition-all active:scale-95">
+            ارسال مجدد
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"/>
+            </svg>
+        </button>
+    </div>
+</div>

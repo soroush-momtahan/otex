@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Otex.Micros.Identity.Application\Otex.Micros.Identity.Application.csproj" />
+      <ProjectReference Include="../../../BuildingBlocks/Otex.BuildingBlocks.Infrastructure/Otex.BuildingBlocks.Infrastructure.csproj"/>  
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Data\Migrations\Asp\" />
+      <Folder Include="Data\Migrations\Duende\" />
+      <Folder Include="Data\Migrations\Identity\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="10.0.8" />
+    </ItemGroup>
+
+</Project>

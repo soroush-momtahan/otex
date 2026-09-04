@@ -42,7 +42,7 @@ public class Result
         // اگر هیچ خطایی وجود نداشت، نتیجه موفقیت آمیز است
         if (errors.Count == 0)
         {
-            return Success();
+            throw new InvalidOperationException("دسترسی به مقدار نتیجه شکست خورده امکان پذیر نیست");
         }
 
         // اگر خطا وجود داشت، آنها را در یک خطای واحد ترکیب کن
@@ -57,7 +57,7 @@ public class Result
         // اگر هیچ خطایی وجود نداشت، نتیجه موفقیت آمیز است
         if (errors.Count == 0)
         {
-            return Success<TValue>(results[0].Value);
+            throw new InvalidOperationException("دسترسی به مقدار نتیجه شکست خورده امکان پذیر نیست");
         }
 
         // اگر خطا وجود داشت، آنها را در یک خطای واحد ترکیب کن

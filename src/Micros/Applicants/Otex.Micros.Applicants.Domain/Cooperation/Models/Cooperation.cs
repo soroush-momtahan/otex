@@ -7,25 +7,40 @@ namespace Otex.Micros.Applicants.Domain.Cooperation.Models;
 
 public class Cooperation : Aggregate<CooperationId>
 {
-    public required Fullname Fullname { get; init; }
-    public required Mobile Mobile { get; init; }
-    public required TypeOfActivity TypeOfActivity { get; init; }
+    public Fullname Fullname { get; init; }
+    public Mobile Mobile { get; init; }
+    public Location Location { get; init; }
+    public TypeOfActivity TypeOfActivity { get; init; }
+    public ReservationDateTime? ReserveDateTime { get; init; }
     public Description? Description { get; init; }
-    public IsVerified IsVerified { get; private set; } = IsVerified.No;
+    public IsVerified IsVerified { get; private set; }
     private Cooperation() {}
+
+    private Cooperation(
+        Fullname fullname,
+        Mobile mobile,
+        Location location,
+        TypeOfActivity typeOfActivity)
+    {
+        Fullname = fullname;
+        Mobile = mobile;
+        Location = location;
+        TypeOfActivity = typeOfActivity;
+        IsVerified = IsVerified.No;
+    }
 
     public static Cooperation Create(
         Fullname fullname,
         Mobile mobile,
+        Location location,
         TypeOfActivity typeOfActivity,
-        Description description)
+        ReservationDateTime? reserveDateTime,
+        Description? description)
     {
-        return new Cooperation
+        return new Cooperation(fullname, mobile, location, typeOfActivity)
         {
-            Fullname = fullname,
-            Mobile = mobile,
-            TypeOfActivity = typeOfActivity,
-            Description = description
+            ReserveDateTime =  reserveDateTime,
+            Description = description,
         };
     }
 

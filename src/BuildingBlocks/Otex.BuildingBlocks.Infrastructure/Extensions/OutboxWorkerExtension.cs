@@ -8,6 +8,7 @@ using Otex.BuildingBlocks.Application.EventBus;
 using Otex.BuildingBlocks.Application.Messaging;
 using Otex.BuildingBlocks.Infrastructure.Outbox;
 using Otex.BuildingBlocks.Infrastructure.Outbox.OptionsSetups;
+using Otex.BuildingBlocks.ServiceDefaults;
 using Quartz;
 
 namespace Otex.BuildingBlocks.Infrastructure.Extensions;

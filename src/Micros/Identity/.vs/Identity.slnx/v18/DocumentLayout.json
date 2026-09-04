@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\Soroush\\Documents\\Code\\01 - projects\\otex\\src\\Micros\\Identity\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A722BBCC-FB57-54C9-22A5-77930B86A38F}|Otex.Micros.Identity.Ui\\Otex.Micros.Identity.Ui.csproj|c:\\users\\soroush\\documents\\code\\01 - projects\\otex\\src\\micros\\identity\\otex.micros.identity.ui\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A722BBCC-FB57-54C9-22A5-77930B86A38F}|Otex.Micros.Identity.Ui\\Otex.Micros.Identity.Ui.csproj|solutionrelative:otex.micros.identity.ui\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A722BBCC-FB57-54C9-22A5-77930B86A38F}|Otex.Micros.Identity.Ui\\Otex.Micros.Identity.Ui.csproj|c:\\users\\soroush\\documents\\code\\01 - projects\\otex\\src\\micros\\identity\\otex.micros.identity.ui\\pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A722BBCC-FB57-54C9-22A5-77930B86A38F}|Otex.Micros.Identity.Ui\\Otex.Micros.Identity.Ui.csproj|solutionrelative:otex.micros.identity.ui\\pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3BFDCB92-EA16-F891-699B-29948197F13C}|Otex.Micros.Identity.Api\\Otex.Micros.Identity.Api.csproj|c:\\users\\soroush\\documents\\code\\01 - projects\\otex\\src\\micros\\identity\\otex.micros.identity.api\\otex.micros.identity.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{3BFDCB92-EA16-F891-699B-29948197F13C}|Otex.Micros.Identity.Api\\Otex.Micros.Identity.Api.csproj|solutionrelative:otex.micros.identity.api\\otex.micros.identity.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
@@ -23,6 +31,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\Soroush\\Documents\\Code\\01 - projects\\otex\\src\\Micros\\Identity\\Otex.Micros.Identity.Ui\\Pages\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Otex.Micros.Identity.Ui\\Pages\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\Soroush\\Documents\\Code\\01 - projects\\otex\\src\\Micros\\Identity\\Otex.Micros.Identity.Ui\\Pages\\_ViewImports.cshtml",
+              "RelativeToolTip": "Otex.Micros.Identity.Ui\\Pages\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-30T06:51:57.235Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Soroush\\Documents\\Code\\01 - projects\\otex\\src\\Micros\\Identity\\Otex.Micros.Identity.Ui\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "Otex.Micros.Identity.Ui\\Pages\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Soroush\\Documents\\Code\\01 - projects\\otex\\src\\Micros\\Identity\\Otex.Micros.Identity.Ui\\Pages\\Index.cshtml",
+              "RelativeToolTip": "Otex.Micros.Identity.Ui\\Pages\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-30T06:51:44.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "HostingExtensions.cs",
               "DocumentMoniker": "C:\\Users\\Soroush\\Documents\\Code\\01 - projects\\otex\\src\\Micros\\Identity\\Otex.Micros.Identity.Api\\HostingExtensions.cs",
               "RelativeDocumentMoniker": "Otex.Micros.Identity.Api\\HostingExtensions.cs",
@@ -30,13 +64,12 @@
               "RelativeToolTip": "Otex.Micros.Identity.Api\\HostingExtensions.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-09T13:27:07.107Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-09T13:27:07.107Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Otex.Micros.Identity.Api",
+              "DocumentIndex": 2,
+              "Title": "Otex.Micros.Identity.Api.csproj",
               "DocumentMoniker": "C:\\Users\\Soroush\\Documents\\Code\\01 - projects\\otex\\src\\Micros\\Identity\\Otex.Micros.Identity.Api\\Otex.Micros.Identity.Api.csproj",
               "RelativeDocumentMoniker": "Otex.Micros.Identity.Api\\Otex.Micros.Identity.Api.csproj",
               "ToolTip": "C:\\Users\\Soroush\\Documents\\Code\\01 - projects\\otex\\src\\Micros\\Identity\\Otex.Micros.Identity.Api\\Otex.Micros.Identity.Api.csproj",

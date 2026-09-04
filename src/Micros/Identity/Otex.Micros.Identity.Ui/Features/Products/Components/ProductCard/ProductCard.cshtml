@@ -1,0 +1,58 @@
+﻿@using System.Text.Json
+@model ProductCardViewModel
+
+@if (!Context.Items.ContainsKey("ProductCardClassLoaded"))
+{
+    Context.Items["ProductCardClassLoaded"] = true;
+    <script type="module" src="/features/Products/Components/ProductCard/ProductCard.js"></script>
+}
+
+@{
+    // تبدیل ViewModel سی‌شارپ به JSON برای تزریق به کانستراکتور JS
+    // تنظیم NamingPolicy اختیاریه (برای اینکه نام‌ها با حرف کوچک یا بزرگ شروع بشن)
+    var jsonViewModel = JsonSerializer.Serialize(Model, new JsonSerializerOptions
+    {
+        PropertyNamingPolicy = null // نام‌ها دقیقاً مثل C# باقی می‌مانند (Name, IsLiked و...)
+    });
+}
+
+
+
+<div id="product-card-@Model.ProductDto.Id"
+     class="product-card p-4 border rounded"
+     x-data="ProductCard(@jsonViewModel)"
+     x-on:mouseenter="isHovered = true"
+     x-on:mouseleave="isHovered = false"
+     x-bind:class="isHovered ? 'shadow-xl bg-gray-100' : 'shadow-md bg-white'">
+
+
+    <h3 class="text-lg font-bold" x-text="vm.ProductDto.Name"></h3>
+
+    <p class="text-sm text-gray-500">
+        قیمت: <span x-text="vm.ProductDto.Price"></span> تومان
+    </p>
+    <p class="text-sm text-gray-500">
+        تعداد لایک ها: <span x-text="vm.ProductDto.Like"></span>
+    </p>
+
+
+    @* <button class="mt-4 px-4 py-2 border rounded" *@
+    @*         x-on:click="toggleLike()" *@
+    @*         hx-post="@Url.Action("ToggleLike", "ProductCardEndpoint", new { id = Model.ProductDto.Id })" *@
+    @*         hx-swap="none"> *@
+    @* <span x-text="buttonIcon"></span> *@
+    @* پسندیدن *@
+    @* </button> *@
+
+    <button hx-post
+            x-on:click="toggleLike()"
+            hx-controller="@nameof(ProductCard)"
+            hx-action="@nameof(ProductCardController.ToggleLike)"
+            hx-route-id="@Model.ProductDto.Id"
+            hx-target="#product-card-@Model.ProductDto.Id"
+            hx-swap="outerHTML">
+        <span x-text="buttonIcon"></span>
+    </button>
+
+
+</div>

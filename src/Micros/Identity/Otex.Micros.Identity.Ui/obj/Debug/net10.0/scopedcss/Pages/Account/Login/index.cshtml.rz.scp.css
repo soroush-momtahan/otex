@@ -1,0 +1,17 @@
+@keyframes story-fill-b-zo205bnbpr {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+.animate-story[b-zo205bnbpr] {
+    animation: story-fill-b-zo205bnbpr 4s linear forwards;
+}
+
+@keyframes fade-in-up-b-zo205bnbpr {
+    0% { opacity: 0; transform: translateY(20px) scale(0.95); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.animate-fade-in-up[b-zo205bnbpr] {
+    animation: fade-in-up-b-zo205bnbpr 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

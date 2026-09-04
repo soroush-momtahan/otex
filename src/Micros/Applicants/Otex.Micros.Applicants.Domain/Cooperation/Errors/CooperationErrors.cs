@@ -28,4 +28,24 @@ public static class CooperationErrors
         "Cooperation.MobileNotValid",
         $"شماره موبایل معتبر نمی باشد.",
         ErrorType.Validation);
+
+    public static Error DateWasPast = new(
+        "Cooperation.DateWasPast",
+        "زمان تاریخ وارد شده گذشته است.",
+        ErrorType.Validation);
+    
+    public static readonly Error DateIsTooLong = new(
+        "Cooperation.DateIsMoreThan10Days",
+        $"تاریخ وارد شده نمی تواند بیش از {ReservationDateTime.MaxFutureDays} روز آینده باشد.",
+        ErrorType.Validation);
+
+    public static readonly Error EnteredDateIsOutOfWorkTime = new(
+        "Cooperation.TimeIsOutOfWorkTime",
+        $"زمان معتبر بین {ReservationDateTime.StartWorkTime} صبح تا {ReservationDateTime.EndWorkTime - 12} بعدازظهر می باشد.",
+        ErrorType.Validation);
+    
+    public static readonly Error ActivityIsOutOfRang = new(
+        "Cooperation.ActivityIsOutOfRang",
+        "کد نوع فعالیت خاج از حد مجاز است.",
+        ErrorType.Validation);
 }

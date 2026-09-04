@@ -1,9 +1,7 @@
 using Aspire.Hosting.Yarp;
 using Aspire.Hosting.Yarp.Transforms;
-using Microsoft.AspNetCore.HttpOverrides;
 using Otex.Orchestration.Extensions;
 using Projects;
-using Yarp.ReverseProxy.Transforms;
 
 var builder = DistributedApplication.CreateBuilder(args);
 
@@ -19,12 +17,18 @@ IResourceBuilder<RabbitMQServerResource> rabbitmq = builder.AddRabbitMQ("messagi
     .WithManagementPlugin();
 
 var identityApi = builder.AddIdentityMicroConfiguration(sharedPostgresServer, rabbitmq);
+var applicantApi = builder.AddApplicantsMicroConfiguration(sharedPostgresServer, rabbitmq);
 
 var webGateway = builder.AddYarp("web-gateway")
     .WithConfiguration(yarp =>
     {
+
+        yarp.AddRoute("{**catch-all}", applicantApi)
+            .WithOrder(1);
+        
         yarp.AddRoute("{**catch-all}", identityApi)
-            .WithTransformXForwarded();
+            .WithTransformXForwarded()
+            .WithOrder(100);
     });
 
 builder.AddProject<Otex_Clients_Shop_Bff>("shop-bff")

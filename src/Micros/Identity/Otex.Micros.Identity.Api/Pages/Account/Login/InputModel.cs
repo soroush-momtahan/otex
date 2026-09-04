@@ -7,7 +7,7 @@ public class InputModel
     [Required(ErrorMessage = "شماره موبایل الزامی است")] 
     public string? Username { get; set; } // همان موبایل
 
-    [Required(ErrorMessage = "رمز عبور الزامی است")] 
+    [Required(ErrorMessage = "رمز عبور الزامی است")]
     public string? Password { get; set; }
 
     public string? ConfirmPassword { get; set; }

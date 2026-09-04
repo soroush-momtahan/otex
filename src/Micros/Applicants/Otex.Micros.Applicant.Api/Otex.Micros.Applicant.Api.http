@@ -1,0 +1,6 @@
+@Otex.Micros.Applicant.Api_HostAddress = http://localhost:5080
+
+GET {{Otex.Micros.Applicant.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

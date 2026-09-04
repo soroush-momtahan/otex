@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
-namespace Otex.Services.Shared.Presentation.Endpoints;
+namespace Otex.BuildingBlocks.Presentation.Endpoints;
 
 public static class EndpointExtensions
 {

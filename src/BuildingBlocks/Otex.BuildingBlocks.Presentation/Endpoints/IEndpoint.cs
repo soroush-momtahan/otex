@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Routing;
 
-namespace Otex.Services.Shared.Presentation.Endpoints;
+namespace Otex.BuildingBlocks.Presentation.Endpoints;
 
 public interface IEndpoint
 {

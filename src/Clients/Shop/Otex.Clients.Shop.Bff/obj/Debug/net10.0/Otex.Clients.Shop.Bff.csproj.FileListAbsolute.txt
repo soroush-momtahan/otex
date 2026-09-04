@@ -56,6 +56,7 @@ C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Clients\Shop\Otex.Clients
 C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Clients\Shop\Otex.Clients.Shop.Bff\obj\Debug\net10.0\Otex.Clients.Shop.Bff.AssemblyInfo.cs
 C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Clients\Shop\Otex.Clients.Shop.Bff\obj\Debug\net10.0\Otex.Clients.Shop.Bff.csproj.CoreCompileInputs.cache
 C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Clients\Shop\Otex.Clients.Shop.Bff\obj\Debug\net10.0\Otex.Clients.Shop.Bff.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Clients\Shop\Otex.Clients.Shop.Bff\obj\Debug\net10.0\Otex.Clients.Shop.Bff.sourcelink.json
 C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Clients\Shop\Otex.Clients.Shop.Bff\obj\Debug\net10.0\rjimswa.dswa.cache.json
 C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Clients\Shop\Otex.Clients.Shop.Bff\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
 C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Clients\Shop\Otex.Clients.Shop.Bff\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json

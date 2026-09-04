@@ -3,6 +3,7 @@ using Duende.Bff.AccessTokenManagement;
 using Duende.Bff.DynamicFrontends;
 using Duende.Bff.Yarp;
 using Microsoft.AspNetCore.DataProtection;
+using Otex.BuildingBlocks.ServiceDefaults;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -71,9 +72,14 @@ app.UseAuthorization();
 
 app.MapBffManagementEndpoints();
 
-// 4. هدایت درخواست‌های API به Gateway (که توسط Aspire Yarp ایجاد شده)
-// فرض می‌کنیم در Aspire اسم gateway شما "web-gateway" است.
-app.MapRemoteBffApiEndpoint("/api", new Uri(builder.Configuration["services:web-gateway:https:0"] ?? "http://localhost:4000"))
+// 1. مسیرهای عمومی (Public APIs)
+// به جای RequireToken از AllowAnonymous استفاده می‌کنیم
+app.MapRemoteBffApiEndpoint("/api/cooperation", new Uri(builder.Configuration["services:web-gateway:https:0"] + "/cooperation"))
+    .AllowAnonymous();
+
+// 2. سایر مسیرهای امن که نیاز به لاگین دارند (Secure APIs)
+// این خط تمام درخواست‌های دیگر که با api/ شروع می‌شوند را هندل می‌کند
+app.MapRemoteBffApiEndpoint("/api", new Uri(builder.Configuration["services:web-gateway:https:0"] ?? "https://localhost:4000"))
     .WithAccessToken(RequiredTokenType.User);
 
 // 5. تغییر حیاتی برای Angular SSR

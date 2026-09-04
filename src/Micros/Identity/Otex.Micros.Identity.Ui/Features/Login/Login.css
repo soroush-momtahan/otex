@@ -1,0 +1,9 @@
+﻿.htmx-swapping #auth-form-content {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+#auth-form-content {
+    transition: all 0.3s ease-out;
+    opacity: 1;
+    transform: translateX(0);
+}

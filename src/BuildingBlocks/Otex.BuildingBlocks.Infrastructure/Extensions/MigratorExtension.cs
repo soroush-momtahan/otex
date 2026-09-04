@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Otex.BuildingBlocks.Infrastructure.Migrator;
+using Otex.BuildingBlocks.ServiceDefaults;
 
 namespace Otex.BuildingBlocks.Infrastructure.Extensions;
 

@@ -1,0 +1,31 @@
+﻿@Html.AntiForgeryToken()
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="htmx-config" content='{"includeIndicatorStyles": false}'>
+    <title>@ViewData["Title"] - OTEX</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/css/app.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/Otex.Micros.Identity.Ui.styles.css" asp-append-version="true"/>
+    <base href="~/" /> 
+</head>
+<body dir="rtl">
+@RenderBody()
+
+@* <script src="~/lib/jquery/dist/jquery.min.js"></script> *@
+@* <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> *@
+@* <script src="~/js/site.js" asp-append-version="true"></script> *@
+
+@await RenderSectionAsync("Scripts", required: false)
+<script>
+    document.addEventListener("htmx:configRequest", (evt) => {
+        let token = document.querySelector('input[name="__RequestVerificationToken"]').value;
+        evt.detail.headers['RequestVerificationToken'] = token;
+    });
+</script>
+<script src="~/js/htmx.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</body>
+</html>

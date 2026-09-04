@@ -1,0 +1,18 @@
+﻿@using Otex.Micros.Identity.Ui.Features.Login.Enums
+@model LoginViewModel
+
+@if (Model.Input.CurrentStep == SignOnStep.InsertMobileNumber)
+{
+    <h2 class="text-3xl font-black text-gray-800">خوش آمدید!</h2>
+    <p class="text-sm text-gray-500 mt-2">جهت شروع، شماره موبایل خود را وارد کنید.</p>
+}
+else if (Model.Input.CurrentStep is SignOnStep.PasswordVerify or SignOnStep.SetPassword)
+{
+    <h2 class="text-3xl font-black text-gray-800">@(Model.Input.IsExistingUser ? "خوش برگشتید" : "امنیت حساب")</h2>
+    <p class="text-sm text-gray-500 mt-2">@(Model.Input.IsExistingUser ? "لطفاً رمز عبور خود را وارد کنید." : "لطفاً رمز عبور جدیدی تعیین کنید.")</p>
+}
+else if (Model.Input.CurrentStep == SignOnStep.SetFullName)
+{
+    <h2 class="text-3xl font-black text-gray-800">قدم آخر</h2>
+    <p class="text-sm text-gray-500 mt-2">نام خود را برای تکمیل پروفایل وارد کنید.</p>
+}

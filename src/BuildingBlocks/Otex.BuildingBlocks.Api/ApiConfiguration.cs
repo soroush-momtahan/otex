@@ -6,7 +6,8 @@ using Otex.BuildingBlocks.Api.ConfigureOptions.ApiInfoOptions;
 using Otex.BuildingBlocks.Api.ConfigureOptions.SwaggerOptions;
 using Otex.BuildingBlocks.Api.Extensions;
 using Otex.BuildingBlocks.Api.Middlewares;
-using Otex.Services.Shared.Presentation.Endpoints;
+using Otex.BuildingBlocks.Presentation.Endpoints;
+using Otex.BuildingBlocks.ServiceDefaults;
 
 namespace Otex.BuildingBlocks.Api;
 
@@ -43,8 +44,8 @@ public static class ApiConfiguration
         }
         
         
-        app.UseAuthentication();
-        app.UseAuthorization();
+        // app.UseAuthentication();
+        // app.UseAuthorization();
         
         app.MapEndpoints();
         return app;

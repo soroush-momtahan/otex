@@ -7,7 +7,7 @@ namespace Otex.BuildingBlocks.Infrastructure.Extensions;
 
 public static class RedisCacheExtension
 {
-    private static void AddRedisCacheServices(
+    public static void AddRedisCacheServices(
         this IHostApplicationBuilder builder,
         string cacheName)
     {

@@ -1,0 +1,18 @@
+<Project Sdk="Aspire.AppHost.Sdk/13.5.3">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AspireUseCliBundle>true</AspireUseCliBundle>
+        <UserSecretsId>6d4adba8-d5af-43bc-9a53-724346e9e782</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Otex.Micros.Identity.Ui\Otex.Micros.Identity.Ui.csproj" />
+      <ProjectReference Include="..\Otex.Micros.Identity.Migrator\Otex.Micros.Identity.Migrator.csproj" />
+      <ProjectReference Include="..\Otex.Micros.Identity.Hosting\Otex.Micros.Identity.Hosting.csproj" IsAspireProjectResource="false"/>
+    </ItemGroup>
+
+</Project>

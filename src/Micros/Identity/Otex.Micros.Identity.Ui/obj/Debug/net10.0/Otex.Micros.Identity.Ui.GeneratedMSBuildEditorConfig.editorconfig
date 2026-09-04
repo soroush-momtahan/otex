@@ -1,0 +1,112 @@
+is_global = true
+build_property.TargetFramework = net10.0
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v10.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EntryPointFilePath = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Otex.Micros.Identity.Ui
+build_property.RootNamespace = Otex.Micros.Identity.Ui
+build_property.ProjectDir = C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Identity\Otex.Micros.Identity.Ui\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 10.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Identity\Otex.Micros.Identity.Ui
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 10.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/Soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Ui/Features/Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcTG9naW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Ui/Features/Login/Partials/_LoginDynamicHeader.cshtml]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcTG9naW5cUGFydGlhbHNcX0xvZ2luRHluYW1pY0hlYWRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Ui/Features/Login/Partials/_LoginError.cshtml]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcTG9naW5cUGFydGlhbHNcX0xvZ2luRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Ui/Features/Login/Partials/_LoginFullname.cshtml]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcTG9naW5cUGFydGlhbHNcX0xvZ2luRnVsbG5hbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Ui/Features/Login/Partials/_LoginMobile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcTG9naW5cUGFydGlhbHNcX0xvZ2luTW9iaWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Ui/Features/Login/Partials/_LoginOtpVerify.cshtml]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcTG9naW5cUGFydGlhbHNcX0xvZ2luT3RwVmVyaWZ5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Ui/Features/Login/Partials/_LoginPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcTG9naW5cUGFydGlhbHNcX0xvZ2luUGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Ui/Features/Login/Partials/_LoginPersisState.cshtml]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcTG9naW5cUGFydGlhbHNcX0xvZ2luUGVyc2lzU3RhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Ui/Features/Login/Partials/_LoginVerifyMethod.cshtml]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcTG9naW5cUGFydGlhbHNcX0xvZ2luVmVyaWZ5TWV0aG9kLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Ui/Features/Products/Components/ProductCard/ProductCard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcUHJvZHVjdHNcQ29tcG9uZW50c1xQcm9kdWN0Q2FyZFxQcm9kdWN0Q2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Ui/Features/Products/Components/ProductList/ProductList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcUHJvZHVjdHNcQ29tcG9uZW50c1xQcm9kdWN0TGlzdFxQcm9kdWN0TGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Ui/Features/Products/Components/TestAlpine/TestAlpine.cshtml]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcUHJvZHVjdHNcQ29tcG9uZW50c1xUZXN0QWxwaW5lXFRlc3RBbHBpbmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Ui/Features/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Ui/Pages/Account/Login/Components/StorySlider/StorySlider.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxMb2dpblxDb21wb25lbnRzXFN0b3J5U2xpZGVyXFN0b3J5U2xpZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Ui/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Ui/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Ui/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Ui/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Ui/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Ui/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Ui/Pages/Account/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxMb2dpblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-zo205bnbpr
+
+[C:/Users/Soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Ui/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-7zvthjklo7

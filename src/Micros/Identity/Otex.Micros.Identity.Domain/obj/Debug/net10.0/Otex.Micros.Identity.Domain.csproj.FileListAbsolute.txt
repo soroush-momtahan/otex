@@ -1,0 +1,16 @@
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Identity\Otex.Micros.Identity.Domain\obj\Debug\net10.0\Otex.Micros.Identity.Domain.csproj.AssemblyReference.cache
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Identity\Otex.Micros.Identity.Domain\obj\Debug\net10.0\Otex.Micros.Identity.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Identity\Otex.Micros.Identity.Domain\obj\Debug\net10.0\Otex.Micros.Identity.Domain.AssemblyInfoInputs.cache
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Identity\Otex.Micros.Identity.Domain\obj\Debug\net10.0\Otex.Micros.Identity.Domain.AssemblyInfo.cs
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Identity\Otex.Micros.Identity.Domain\obj\Debug\net10.0\Otex.Micros.Identity.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Identity\Otex.Micros.Identity.Domain\obj\Debug\net10.0\Otex.Micros.Identity.Domain.sourcelink.json
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Identity\Otex.Micros.Identity.Domain\bin\Debug\net10.0\Otex.Micros.Identity.Domain.deps.json
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Identity\Otex.Micros.Identity.Domain\bin\Debug\net10.0\Otex.Micros.Identity.Domain.dll
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Identity\Otex.Micros.Identity.Domain\bin\Debug\net10.0\Otex.Micros.Identity.Domain.pdb
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Identity\Otex.Micros.Identity.Domain\bin\Debug\net10.0\Otex.BuildingBlocks.Domain.dll
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Identity\Otex.Micros.Identity.Domain\bin\Debug\net10.0\Otex.BuildingBlocks.Domain.pdb
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Identity\Otex.Micros.Identity.Domain\obj\Debug\net10.0\Otex.Mic.986120B1.Up2Date
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Identity\Otex.Micros.Identity.Domain\obj\Debug\net10.0\Otex.Micros.Identity.Domain.dll
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Identity\Otex.Micros.Identity.Domain\obj\Debug\net10.0\refint\Otex.Micros.Identity.Domain.dll
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Identity\Otex.Micros.Identity.Domain\obj\Debug\net10.0\Otex.Micros.Identity.Domain.pdb
+C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Identity\Otex.Micros.Identity.Domain\obj\Debug\net10.0\ref\Otex.Micros.Identity.Domain.dll

@@ -1,0 +1,48 @@
+@using Otex.Micros.Identity.Ui.Features.Login.Enums
+@model LoginViewModel
+
+<form id="multi-step-auth-form"
+      hx-post="@Url.Action("Process", "Login")"
+      hx-target="this"
+      hx-swap="outerHTML"
+      class="relative">
+
+    <partial name="Partials/_LoginPersisState.cshtml" model="@Model"/>
+
+    <div id="auth-form-content" class="relative min-h-[250px]">
+
+        <div class="text-center mb-6">
+            <partial name="Partials/_LoginDynamicHeader.cshtml" model="@Model"/>
+        </div>
+
+        <div
+            class="grid transition-all duration-500 ease-in-out @(Model.HasError ? "grid-rows-[1fr] opacity-100 mb-4" : "grid-rows-[0fr] opacity-0 mb-0")">
+            <partial name="Partials/_LoginError.cshtml" model="@Model"/>
+        </div>
+
+        @switch (Model.Input.CurrentStep)
+        {
+            case SignOnStep.InsertMobileNumber:
+                <partial name="Partials/_LoginMobile.cshtml" model="@Model"/>
+                break;
+            case SignOnStep.PasswordVerify or SignOnStep.SetPassword:
+                <partial name="Partials/_LoginPassword.cshtml" model="@Model"/>
+                break;
+            case SignOnStep.SetFullName:
+                <partial name="Partials/_LoginFullname.cshtml" model="@Model"/>
+                break;
+            case SignOnStep.OtpVerify:
+                <partial name="Partials/_LoginOtpVerify.cshtml" model="@Model"/>
+                break;
+        }
+    </div>
+</form>
+
+@{
+    @if (!Context.Items.ContainsKey("LoginAssetsLoaded"))
+    {
+        Context.Items["StorySliderAssetsLoaded"] = true;
+        <link rel="stylesheet" href="/Features/Login/Login.css"/>
+        <script type="module" src="/Features/Login/Login.js"></script>
+    }
+}

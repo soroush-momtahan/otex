@@ -2,49 +2,44 @@ using Duende.IdentityServer;
 using Duende.IdentityServer.Events;
 using Duende.IdentityServer.Services;
 using Duende.IdentityServer.Stores;
+using MediatR;
+// using MediatR;
 using Otex.Micros.Identity.Api.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Otex.BuildingBlocks.Application.Caching;
+using Otex.BuildingBlocks.Domain.Results;
+using Otex.Micros.Identity.Application.Identity.Features.Commands.SendOtp;
+using Otex.Micros.Identity.Application.Identity.Features.Commands.VerifyMobile;
+
+// using Otex.BuildingBlocks.Domain.Results;
+// using Otex.Micros.Identity.Application.Identity.Features.Commands.SendOtp;
 
 
 namespace Otex.Micros.Identity.Api.Pages.Account.Login;
 
 [SecurityHeaders]
 [AllowAnonymous]
-public class Index : PageModel
+public class Index(
+    IIdentityServerInteractionService interaction,
+    IAuthenticationSchemeProvider schemeProvider,
+    IIdentityProviderStore identityProviderStore,
+    IEventService events,
+    UserManager<ApplicationUser> userManager,
+    SignInManager<ApplicationUser> signInManager,
+    ISender sender,
+    ICacheService cacheService)
+    : PageModel
 {
-    private readonly UserManager<ApplicationUser> _userManager;
-    private readonly SignInManager<ApplicationUser> _signInManager;
-    private readonly IIdentityServerInteractionService _interaction;
-    private readonly IEventService _events;
-    private readonly IAuthenticationSchemeProvider _schemeProvider;
-    private readonly IIdentityProviderStore _identityProviderStore;
-
     public ViewModel View { get; set; } = default!;
 
     [BindProperty] public InputModel Input { get; set; } = default!;
     
     [BindProperty] public int CurrentStep { get; set; } = 1;
     [BindProperty] public bool IsExistingUser { get; set; }
-
-    public Index(
-        IIdentityServerInteractionService interaction,
-        IAuthenticationSchemeProvider schemeProvider,
-        IIdentityProviderStore identityProviderStore,
-        IEventService events,
-        UserManager<ApplicationUser> userManager,
-        SignInManager<ApplicationUser> signInManager)
-    {
-        _userManager = userManager;
-        _signInManager = signInManager;
-        _interaction = interaction;
-        _schemeProvider = schemeProvider;
-        _identityProviderStore = identityProviderStore;
-        _events = events;
-    }
 
     public async Task<IActionResult> OnGetAsync(string? returnUrl, CancellationToken ct)
     {
@@ -59,6 +54,26 @@ public class Index : PageModel
     {
         ModelState.Clear();
         CurrentStep = 1;
+        
+         Result sendOtpOrError = await sender.Send(new SendOtpCommand(Input.Username!), ct);
+         if (sendOtpOrError.IsFailure)
+         {
+             ModelState.AddModelError(sendOtpOrError.Error.Code, sendOtpOrError.Error.Description);
+             await BuildModelAsync(Input.ReturnUrl, ct);
+             return Page();
+         }
+         // step 2
+         var code = await cacheService.GetAsync<string>($"Otp:{Input.Username}");
+         Result<VerifyMobileResult> verifyMobileResult = await sender.Send(new VerifyMobileCommand(code!, Input.Username!), ct);
+
+         IsExistingUser = !verifyMobileResult.Value.IsNewUser;
+         CurrentStep = 2; 
+         
+         await BuildModelAsync(Input.ReturnUrl, ct);
+         return Page();
+         
+         ModelState.Clear();
+         CurrentStep = 1;
 
         if (string.IsNullOrWhiteSpace(Input.Username) || Input.Username.Length < 10)
         {
@@ -67,7 +82,7 @@ public class Index : PageModel
             return Page();
         }
 
-        var user = await _userManager.FindByNameAsync(Input.Username);
+        var user = await userManager.FindByNameAsync(Input.Username);
         IsExistingUser = user != null;
         CurrentStep = 2; 
 
@@ -84,7 +99,7 @@ public class Index : PageModel
         CurrentStep = 2;
 
         // چک کردن امنیتی مجدد کاربر جهت جلوگیری از دستکاری فرم در کلاینت
-        var user = await _userManager.FindByNameAsync(Input.Username!);
+        var user = await userManager.FindByNameAsync(Input.Username!);
         IsExistingUser = user != null;
 
         if (string.IsNullOrWhiteSpace(Input.Password) || Input.Password.Length < 6)
@@ -97,7 +112,7 @@ public class Index : PageModel
         if (IsExistingUser)
         {
             // مسیر کاربر قدیمی -> ورود نهایی
-            var result = await _signInManager.PasswordSignInAsync(Input.Username!, Input.Password!, isPersistent: true, lockoutOnFailure: true);
+            var result = await signInManager.PasswordSignInAsync(Input.Username!, Input.Password!, isPersistent: true, lockoutOnFailure: true);
             if (result.Succeeded)
             {
                 return await HandleSuccessfulLogin(user!, Input.ReturnUrl, ct);
@@ -131,7 +146,7 @@ public class Index : PageModel
         CurrentStep = 3;
 
         // بررسی مجدد برای جلوگیری از دستکاری
-        var existingUser = await _userManager.FindByNameAsync(Input.Username!);
+        var existingUser = await userManager.FindByNameAsync(Input.Username!);
         if (existingUser != null)
         {
             return RedirectToPage(new { returnUrl = Input.ReturnUrl }); // جلوگیری از هک
@@ -152,7 +167,7 @@ public class Index : PageModel
             LastName = Input.LastName 
         };
         
-        var createResult = await _userManager.CreateAsync(newUser, Input.Password!);
+        var createResult = await userManager.CreateAsync(newUser, Input.Password!);
 
         if (!createResult.Succeeded)
         {
@@ -161,7 +176,7 @@ public class Index : PageModel
             return Page();
         }
 
-        await _signInManager.PasswordSignInAsync(Input.Username!, Input.Password!, isPersistent: true, lockoutOnFailure: false);
+        await signInManager.PasswordSignInAsync(Input.Username!, Input.Password!, isPersistent: true, lockoutOnFailure: false);
         return await HandleSuccessfulLogin(newUser, Input.ReturnUrl, ct);
     }
 
@@ -175,7 +190,7 @@ public class Index : PageModel
         // تشخیص امنیتی مجدد هنگام برگشت
         if(!string.IsNullOrEmpty(Input.Username))
         {
-            var user = await _userManager.FindByNameAsync(Input.Username);
+            var user = await userManager.FindByNameAsync(Input.Username);
             IsExistingUser = user != null;
         }
 
@@ -189,8 +204,8 @@ public class Index : PageModel
     // =================================================================
     private async Task<IActionResult> HandleSuccessfulLogin(ApplicationUser user, string? returnUrl, CancellationToken ct)
     {
-        var context = await _interaction.GetAuthorizationContextAsync(returnUrl, ct);
-        await _events.RaiseAsync(new UserLoginSuccessEvent(user.UserName, user.Id, user.UserName, clientId: context?.Client.ClientId), ct);
+        var context = await interaction.GetAuthorizationContextAsync(returnUrl, ct);
+        await events.RaiseAsync(new UserLoginSuccessEvent(user.UserName, user.Id, user.UserName, clientId: context?.Client.ClientId), ct);
 
         var redirectUrl = context != null ? (returnUrl ?? "~/") : (Url.IsLocalUrl(returnUrl) ? returnUrl : "~/");
 
@@ -212,10 +227,10 @@ public class Index : PageModel
 
         Input.ReturnUrl = returnUrl;
 
-        var context = await _interaction.GetAuthorizationContextAsync(returnUrl, ct);
+        var context = await interaction.GetAuthorizationContextAsync(returnUrl, ct);
         if (context?.IdP != null)
         {
-            var scheme = await _schemeProvider.GetSchemeAsync(context.IdP);
+            var scheme = await schemeProvider.GetSchemeAsync(context.IdP);
             if (scheme != null)
             {
                 var local = context.IdP == IdentityServerConstants.LocalIdentityProvider;
@@ -229,11 +244,11 @@ public class Index : PageModel
             return;
         }
 
-        var schemes = await _schemeProvider.GetAllSchemesAsync();
+        var schemes = await schemeProvider.GetAllSchemesAsync();
         var providers = schemes.Where(x => x.DisplayName != null)
             .Select(x => new ViewModel.ExternalProvider(authenticationScheme: x.Name, displayName: x.DisplayName ?? x.Name)).ToList();
 
-        var dynamicSchemes = (await _identityProviderStore.GetAllSchemeNamesAsync(ct))
+        var dynamicSchemes = (await identityProviderStore.GetAllSchemeNamesAsync(ct))
             .Where(x => x.Enabled)
             .Select(x => new ViewModel.ExternalProvider(authenticationScheme: x.Scheme, displayName: x.DisplayName ?? x.Scheme));
         providers.AddRange(dynamicSchemes);
