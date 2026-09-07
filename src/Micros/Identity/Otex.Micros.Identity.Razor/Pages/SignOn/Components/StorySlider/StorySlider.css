@@ -1,0 +1,9 @@
+﻿@keyframes story-fill {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+.animate-story {
+    /* انیمیشن دقیقاً به اندازه متغیر زمان جاوااسکریپتت (4 ثانیه) طول میکشه */
+    animation: story-fill 4s linear forwards;
+}

@@ -1,0 +1,88 @@
+@using System.Text.Json
+@model StorySlider
+
+@{
+    var jsonViewModel = JsonSerializer.Serialize(Model.ViewModel, new JsonSerializerOptions { PropertyNamingPolicy = null });
+}
+
+<div class="w-full h-full overflow-hidden">
+    <div
+        class="absolute bottom-[35%] md:bottom-0 start-0 md:w-[calc(100%-400px)] lg:md:w-[calc(100%-450px)] opacity-20 pointer-events-none z-0">
+        <img src="~/images/silhouette-02.png" class="w-full h-auto object-cover md:object-contain object-bottom"/>
+    </div>
+
+    <div x-data='StorySlider(@Html.Raw(jsonViewModel))'
+         class="flex-1 flex flex-col pt-4 md:pt-8 px-4 md:px-8 relative z-10 justify-between md:justify-start h-full w-full">
+
+
+        <!-- نوار پیشرفت (Progress Bars) -->
+        <div class="flex gap-1.5 mb-8 md:mb-12">
+            <template x-for="(slide, index) in Slides" :key="index">
+                <div class="h-1 flex-1 bg-white/30 rounded-full overflow-hidden">
+
+                    <!-- ۲. حل مشکل انیمیشن نوار پیشرفت -->
+                    <!-- جادوی کلیدی: اضافه کردن key به div داخلی. -->
+                    <!-- این کار باعث میشه وقتی اسلاید عوض میشه، Alpine این المنت رو کلا از DOM پاک کنه و دوباره بسازه (جایگزین تمیزتر برای void offsetWidth) -->
+                    @*:key="'bar-' + index + '-' + (index === currentIndex)"*@
+                    <div class="h-full bg-white rounded-full"
+                         x-bind:class="{
+                         'w-full': index < currentIndex,
+                         'w-0': index > currentIndex,
+                         'animate-story': index === currentIndex
+                     }">
+                    </div>
+
+                </div>
+            </template>
+        </div>
+
+        <!-- محتوای اسلایدر -->
+        <div class="relative flex-1 w-full h-full">
+            <template x-for="(slide, index) in Slides" :key="index">
+
+                <!-- ۳. حذف CSS سفارشی و استفاده از ترانزیشن‌های بومی و قدرتمند Alpine + Tailwind -->
+                <div x-show="currentIndex === index"
+                     x-transition:enter="transition ease-out duration-500"
+                     x-transition:enter-start="opacity-0 translate-y-5 scale-95"
+                     x-transition:enter-end="opacity-100 translate-y-0 scale-100"
+                     x-transition:leave="transition ease-in duration-200"
+                     x-transition:leave-start="opacity-100 translate-y-0 scale-100"
+                     x-transition:leave-end="opacity-0 -translate-y-5 scale-95"
+                     class="absolute inset-0 flex flex-col items-center text-center text-white mt-auto md:mt-10 mb-auto">
+
+                    <h1 x-text="slide.Title" class="text-xl md:text-3xl font-black mb-3 md:mb-5 drop-shadow-md"></h1>
+                    <p x-text="slide.Desc" class="text-sm md:text-base opacity-90 drop-shadow-sm px-4 md:px-10"></p>
+
+                    <div class="mt-8 md:mt-12 relative w-48 h-48 md:w-72 md:h-72 flex justify-center items-center">
+                        <img x-bind:src="slide.Image"
+                             class="w-full h-full scale-150 md:scale-100 lg:scale-150 object-contain transition-transform hover:scale-y-150"/>
+                    </div>
+                </div>
+
+            </template>
+            @* <template x-for="(slide, index) in Slides" :key="index"> *@
+            @*     <div x-show="currentIndex === index" *@
+            @*          x-transition:enter="transition ease-out duration-500" *@
+            @*          x-transition:enter-start="opacity-0 translate-y-5 scale-95" *@
+            @*          x-transition:enter-end="opacity-100 translate-y-0 scale-100" *@
+            @*          x-transition:leave="transition ease-in duration-200" *@
+            @*          x-transition:leave-start="opacity-100 translate-y-0 scale-100" *@
+            @*          x-transition:leave-end="opacity-0 -translate-y-5 scale-95" *@
+            @*          class="absolute inset-0 flex flex-col items-center justify-center text-center text-white py-4 md:py-10"> *@
+            @* *@
+            @* *@
+            @*         <h1 x-text="slide.Title" class="text-2xl md:text-3xl font-black mb-3 md:mb-5 drop-shadow-lg"></h1> *@
+            @*         <p x-text="slide.Desc" class="text-sm md:text-base opacity-90 drop-shadow-md px-4 md:px-10"></p> *@
+            @* *@
+            @* *@
+            @*         <div class="mt-8 md:mt-12 relative w-48 h-48 md:w-72 md:h-72 flex justify-center items-center"> *@
+            @* *@
+            @*             <img :src="slide.Image" *@
+            @*                  class="w-full h-full scale-110 md:scale-100 lg:scale-125 object-contain transition-transform hover:scale-110"/> *@
+            @*         </div> *@
+            @* *@
+            @*     </div> *@
+            @* </template> *@
+        </div>
+    </div>
+</div>

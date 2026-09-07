@@ -18,15 +18,15 @@ public record LoginInputModel(
     string? FirstName,
     string? LastName,
     string? ReturnUrl,
-    string? OtpCode
-    );
-
-public record LoginViewModel(
-    LoginInputModel Input,
+    string? OtpCode,
+    /*Remove From Here - Insert in View Model*/
     SignOnStep? CurrentStep,
     SignOnStep? PreviousStep,
     bool IsExistingUser,
-    SignOnAction? Action,
+    SignOnAction? Action);
+
+public record LoginViewModel(
+    LoginInputModel Input,
     List<Error> Errors)
 {
     public bool HasError => Errors.Any();
@@ -45,12 +45,12 @@ public class LoginController(
             input = input with { CurrentStep = input.PreviousStep };
             return RenderComponent(input);
         }
-        
+
         if (input.CurrentStep == SignOnStep.InsertMobileNumber)
         {
             Result<SendOtpForNewUserResult> mobileExistenceOrError =
                 await sender.Send(new SendOtpForNewUserCommand(input.Mobile!));
-            
+
             return mobileExistenceOrError.Match(
                 onSuccess: result =>
                 {
@@ -62,6 +62,7 @@ public class LoginController(
                             CurrentStep = SignOnStep.VerifyMethod
                         });
                     }
+
                     return RenderComponent(input with
                     {
                         IsExistingUser = result.IsUserExist,
@@ -72,42 +73,36 @@ public class LoginController(
                 onFailure: err => RenderComponent(input, err)
             );
         }
-        
+
         if (input is { CurrentStep: SignOnStep.VerifyMethod, Action: SignOnAction.OtpVerifyMethod })
         {
             Result sendOtpOrError = await sender.Send(new SendOtpCommand(input.Mobile!));
             return sendOtpOrError.Match(
                 onSuccess: () => RenderComponent(input with
                 {
-                    CurrentStep = SignOnStep.OtpVerify, 
+                    CurrentStep = SignOnStep.OtpVerify,
                     PreviousStep = SignOnStep.VerifyMethod
                 }),
                 onFailure: (err) => RenderComponent(input, err)
             );
         }
-        
+
         if (input is { CurrentStep: SignOnStep.VerifyMethod, Action: SignOnAction.PasswordVerifyMethod })
         {
-            
         }
 
         if (input.CurrentStep == SignOnStep.OtpVerify)
         {
-            
         }
 
         if (input.CurrentStep == SignOnStep.SetPassword)
         {
-            
         }
 
         if (input.CurrentStep == SignOnStep.SetFullName)
         {
-            
         }
-        
-        
-        
+
 
         // // پردازش مرحله ۲ (رمز عبور)
         // if (input.CurrentStep == 2)
@@ -201,12 +196,12 @@ public class LoginInitializer : FeatureViewComponent
             null,
             null,
             returnUrl,
+            null,
             SignOnStep.InsertMobileNumber,
             SignOnStep.InsertMobileNumber,
             false,
-            null,
-            string.Empty
-            );
+            null
+        );
 
         var initialViewModel = new LoginViewModel(initialInput, new List<Error>());
 

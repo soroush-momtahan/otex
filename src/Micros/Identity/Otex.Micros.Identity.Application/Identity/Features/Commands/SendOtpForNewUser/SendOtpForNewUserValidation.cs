@@ -11,6 +11,6 @@ internal sealed class SendOtpForNewUserValidation : AbstractValidator<SendOtpFor
             .NotEmpty()
             .WithMessage(IdentityErrors.MobileNotValid.Description)
             .Length(11)
-            .WithMessage(IdentityErrors.MobileNotValid.Description);
+            .WithMessage(IdentityErrors.MobileNotValidLenght.Description);
     }
 }

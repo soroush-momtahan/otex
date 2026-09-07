@@ -80,6 +80,10 @@ public class IdentityErrors
         "Identity.MobileNotValid",
         $"شماره وارد شده معتبر نمی باشد.",
         ErrorType.Validation);
+    public static readonly Error MobileNotValidLenght = new(
+        "Identity.MobileNotValidLenght",
+        $"شماره موبایل باید دقیقا برابر با 11 رقم باشد.",
+        ErrorType.Validation);
 
     public static Error DuplicateMobile(string mobile) => new(
         "Identity.DuplicateMobile",

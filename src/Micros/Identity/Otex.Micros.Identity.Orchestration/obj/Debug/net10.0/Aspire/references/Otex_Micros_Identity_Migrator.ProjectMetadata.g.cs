@@ -15,7 +15,7 @@ public class Otex_Micros_Identity_Migrator : global::Aspire.Hosting.IProjectMeta
     /// <summary>
     /// The path to the Otex_Micros_Identity_Migrator project.
     /// </summary>
-    public string ProjectPath => """C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Identity\Otex.Micros.Identity.Migrator\Otex.Micros.Identity.Migrator.csproj""";
+    public string ProjectPath => """/home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Migrator/Otex.Micros.Identity.Migrator.csproj""";
 
     /// <summary>
     /// Gets a value indicating whether building the project before running it should be suppressed.

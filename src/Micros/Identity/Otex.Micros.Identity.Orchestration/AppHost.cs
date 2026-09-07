@@ -16,7 +16,7 @@ IResourceBuilder<RabbitMQServerResource> rabbitmq = builder.AddRabbitMQ("messagi
     .WithLifetime(ContainerLifetime.Persistent)
     .WithManagementPlugin();
 
-builder.AddIdentityHostingConfiguration<Otex_Micros_Identity_Ui, Otex_Micros_Identity_Migrator>(
+builder.AddIdentityHostingConfiguration<Otex_Micros_Identity_Razor, Otex_Micros_Identity_Migrator>(
     sharedPostgresServer, redis, rabbitmq);
 
 builder.Build().Run();

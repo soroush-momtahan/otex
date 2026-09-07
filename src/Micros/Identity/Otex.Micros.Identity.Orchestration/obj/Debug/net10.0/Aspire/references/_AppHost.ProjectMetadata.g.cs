@@ -17,5 +17,5 @@ public class Otex_Micros_Identity_Orchestration
     /// <summary>
     /// The path to the Aspire Host project.
     /// </summary>
-    public static string ProjectPath => """C:\Users\Soroush\Documents\Code\01 - projects\otex\src\Micros\Identity\Otex.Micros.Identity.Orchestration""";
+    public static string ProjectPath => """/home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Orchestration""";
 }

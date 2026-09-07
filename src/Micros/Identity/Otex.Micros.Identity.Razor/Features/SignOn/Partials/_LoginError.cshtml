@@ -1,0 +1,9 @@
+﻿@model SignOn
+
+
+<div class="overflow-hidden">
+    @foreach (var error in Model.ViewModel.Errors)
+    {
+        <p class="text-rose-500 text-sm font-bold text-center">@error.Description</p>
+    }
+</div>

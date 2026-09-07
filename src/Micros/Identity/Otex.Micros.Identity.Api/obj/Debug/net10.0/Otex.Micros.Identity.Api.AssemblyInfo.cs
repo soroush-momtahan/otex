@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Otex.Micros.Identity.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+92ed29caf0f1736951c0a45433b997afb01a884f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+db4a17b1d19f28f9669119a920d7fa4cc369d951")]
 [assembly: System.Reflection.AssemblyProductAttribute("Otex.Micros.Identity.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Otex.Micros.Identity.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

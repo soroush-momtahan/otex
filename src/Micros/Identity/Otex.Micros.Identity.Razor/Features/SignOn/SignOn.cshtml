@@ -1,0 +1,54 @@
+﻿@using System.Text.Json
+@using Otex.Micros.Identity.Razor.Features.SignOn.Enums
+@model SignOn
+
+@{
+    var jsonViewModel = JsonSerializer.Serialize(Model.ViewModel, new JsonSerializerOptions { PropertyNamingPolicy = null });
+}
+<form id="multi-step-auth-form"
+      on:submit="@(() => Model.Submitting())">
+
+    @{
+        @if (!Context.Items.ContainsKey("LoginAssetsLoaded"))
+        {
+            Context.Items["StorySliderAssetsLoaded"] = true;
+            @* <link class="hidden" rel="stylesheet" href="/Features/SignOn/SignOn.cshtml.css"/> *@
+            @* <script class="hidden" type="module" src="/Features/SignOn/SignOn.cshtml.js"></script> *@
+        }
+    }
+
+    @* <partial name="Partials/_LoginPersisState.cshtml" model="@Model"/> *@
+
+    <div id="auth-form-content" class="relative min-h-[250px]">
+
+        <div class="text-center mb-6">
+            <partial name="Partials/_LoginDynamicHeader.cshtml" model="@Model"/>
+        </div>
+
+        <div
+            class="grid transition-all duration-500 ease-in-out @(Model.ViewModel.HasError ? "grid-rows-[1fr] opacity-100 mb-4" : "grid-rows-[0fr] opacity-0 mb-0")">
+            <partial name="Partials/_LoginError.cshtml" model="@Model"/>
+        </div>
+
+        @switch (Model.ViewModel.CurrentStep)
+        {
+            case SignOnStep.InsertMobileNumber:
+                <partial name="Partials/_LoginMobile.cshtml" model="@Model"/>
+                break;
+            case SignOnStep.PasswordVerify or SignOnStep.SetPassword:
+                <partial name="Partials/_LoginPassword.cshtml" model="@Model"/>
+                break;
+            case SignOnStep.SetFullName:
+                <partial name="Partials/_LoginFullname.cshtml" model="@Model"/>
+                break;
+            case SignOnStep.OtpVerify:
+                <partial name="Partials/_LoginOtpVerify.cshtml" model="@Model"/>
+                break;
+            case SignOnStep.VerifyMethod:
+                <partial name="Partials/_LoginVerifyMethod.cshtml" model="@Model"/>
+                break;
+        }
+    </div>
+</form>
+
+

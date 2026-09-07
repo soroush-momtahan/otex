@@ -10,7 +10,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Otex.Micros.Identity.Ui\Otex.Micros.Identity.Ui.csproj" />
+      <ProjectReference Include="..\Otex.Micros.Identity.Razor\Otex.Micros.Identity.Razor.csproj" />
       <ProjectReference Include="..\Otex.Micros.Identity.Migrator\Otex.Micros.Identity.Migrator.csproj" />
       <ProjectReference Include="..\Otex.Micros.Identity.Hosting\Otex.Micros.Identity.Hosting.csproj" IsAspireProjectResource="false"/>
     </ItemGroup>

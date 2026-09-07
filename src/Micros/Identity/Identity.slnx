@@ -6,5 +6,6 @@
   <Project Path="Otex.Micros.Identity.Infrastructure/Otex.Micros.Identity.Infrastructure.csproj" />
   <Project Path="Otex.Micros.Identity.Migrator/Otex.Micros.Identity.Migrator.csproj" />
   <Project Path="Otex.Micros.Identity.Orchestration/Otex.Micros.Identity.Orchestration.csproj" />
+  <Project Path="Otex.Micros.Identity.Razor/Otex.Micros.Identity.Razor.csproj" />
   <Project Path="Otex.Micros.Identity.Ui/Otex.Micros.Identity.Ui.csproj" />
 </Solution>

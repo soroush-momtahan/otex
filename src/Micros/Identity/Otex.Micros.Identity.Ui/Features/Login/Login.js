@@ -118,7 +118,6 @@ class Login {
             inputs[index].focus();
         }
     }
-
     startTimer() {
         this.timerInterval = setInterval(() => {
             if (this.timeLeft > 0) {

@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v10.0": {
       "Otex.Micros.Identity.Migrator/1.0.0": {
         "dependencies": {
+          "Microsoft.Extensions.Hosting": "10.0.11",
           "Otex.Micros.Identity.Infrastructure": "1.0.0"
         },
         "runtime": {
@@ -306,6 +307,11 @@
           }
         }
       },
+      "Microsoft.Extensions.Hosting/10.0.11": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging.EventLog": "10.0.11"
+        }
+      },
       "Microsoft.Extensions.Http.Diagnostics/10.6.0": {
         "dependencies": {
           "Microsoft.Extensions.Telemetry": "10.6.0"
@@ -327,6 +333,11 @@
             "assemblyVersion": "10.6.0.0",
             "fileVersion": "10.600.26.26104"
           }
+        }
+      },
+      "Microsoft.Extensions.Logging.EventLog/10.0.11": {
+        "dependencies": {
+          "System.Diagnostics.EventLog": "10.0.11"
         }
       },
       "Microsoft.Extensions.Resilience/10.6.0": {
@@ -801,6 +812,16 @@
           }
         }
       },
+      "System.Diagnostics.EventLog/10.0.11": {
+        "runtimeTargets": {
+          "runtimes/win/lib/net10.0/System.Diagnostics.EventLog.Messages.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.1126.37416"
+          }
+        }
+      },
       "System.IdentityModel.Tokens.Jwt/8.0.1": {
         "dependencies": {
           "Microsoft.IdentityModel.JsonWebTokens": "8.14.0",
@@ -1114,6 +1135,13 @@
       "path": "microsoft.extensions.diagnostics.healthchecks.entityframeworkcore/10.0.8",
       "hashPath": "microsoft.extensions.diagnostics.healthchecks.entityframeworkcore.10.0.8.nupkg.sha512"
     },
+    "Microsoft.Extensions.Hosting/10.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eIDa/Rl+93aj17gMlFsJJx+LhBvb3CP0Mu1PeVYkDp2Y3S4Jock8UynfGQEcx7lrlq+gKW+ECQJHbro/LTPDEQ==",
+      "path": "microsoft.extensions.hosting/10.0.11",
+      "hashPath": "microsoft.extensions.hosting.10.0.11.nupkg.sha512"
+    },
     "Microsoft.Extensions.Http.Diagnostics/10.6.0": {
       "type": "package",
       "serviceable": true,
@@ -1127,6 +1155,13 @@
       "sha512": "sha512-Diw9HdFABHx0EQTjfanXKuV6zSEyHEEH11ZGdsNxNf/3gsLEiBPXUximDG0EwYt1iIalH0JFlI1DXqpE4VjDpQ==",
       "path": "microsoft.extensions.http.resilience/10.6.0",
       "hashPath": "microsoft.extensions.http.resilience.10.6.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Logging.EventLog/10.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Eck9GpCCpvZ3f6L7IUlN+mPtRVefnf7PsiIG5vi61QawPtLNCEAv2TPD/M3SojcU0PFaef+BxiVGPOShFHtDog==",
+      "path": "microsoft.extensions.logging.eventlog/10.0.11",
+      "hashPath": "microsoft.extensions.logging.eventlog.10.0.11.nupkg.sha512"
     },
     "Microsoft.Extensions.Resilience/10.6.0": {
       "type": "package",
@@ -1435,6 +1470,13 @@
       "sha512": "sha512-jC5wkRe8K6HPoDENUws+fl2d7+GKz+ky8SWEDzYzPx6hHt2EwxWm01gmYPWLzlT49jfYYap0guB5bExtyX9aIQ==",
       "path": "stackexchange.redis/2.13.1",
       "hashPath": "stackexchange.redis.2.13.1.nupkg.sha512"
+    },
+    "System.Diagnostics.EventLog/10.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QTXEoQBzz00SFWbo7nAg1Ogd4f99lwqcO9uAJ7MYSLEUR28f6As32QktrqG2Fr9cfAfd1GjLyGYspE7Ipj7P6w==",
+      "path": "system.diagnostics.eventlog/10.0.11",
+      "hashPath": "system.diagnostics.eventlog.10.0.11.nupkg.sha512"
     },
     "System.IdentityModel.Tokens.Jwt/8.0.1": {
       "type": "package",

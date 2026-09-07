@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LsDKhmool78=",
+  "dgSpecHash": "c5LXjJX1fvU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Soroush\\Documents\\Code\\01 - projects\\otex\\src\\Micros\\Identity\\Otex.Micros.Identity.Domain\\Otex.Micros.Identity.Domain.csproj",
+  "projectFilePath": "/home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Domain/Otex.Micros.Identity.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

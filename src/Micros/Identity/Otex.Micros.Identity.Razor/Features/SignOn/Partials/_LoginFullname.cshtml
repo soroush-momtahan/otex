@@ -1,0 +1,21 @@
+﻿@using Otex.Micros.Identity.Razor.Features.SignOn.Enums
+@model SignOn
+
+<div class="flex flex-col gap-4 mb-6">
+    <input asp-for="@Model.InputModel.FirstName" bind type="text" placeholder="نام"
+           class="w-full h-14 md:h-16 border border-gray-200 rounded-2xl px-4 text-center focus:border-blue-500 transition-all shadow-sm"/>
+    <input asp-for="@Model.InputModel.LastName" bind type="text" placeholder="نام خانوادگی"
+           class="w-full h-14 md:h-16 border border-gray-200 rounded-2xl px-4 text-center focus:border-blue-500 transition-all shadow-sm"/>
+</div>
+
+<div class="flex gap-2">
+    <button type="button"
+            on:click="@(() => Model.BackStep())"
+            class="w-1/3 h-14 md:h-16 bg-gray-200 text-gray-700 font-bold rounded-2xl active:scale-95">
+        برگشت
+    </button>
+    <button type="submit" name="action" value="next"
+            class="w-2/3 h-14 md:h-16 bg-emerald-600 text-white font-bold rounded-2xl shadow-lg">
+        تکمیل و ورود
+    </button>
+</div>
