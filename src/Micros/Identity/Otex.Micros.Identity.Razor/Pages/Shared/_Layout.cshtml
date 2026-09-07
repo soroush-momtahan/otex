@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    @*Hydro*@
+    <meta name="hydro-config" />
+    <script defer src="~/hydro/hydro.js" asp-append-version="true"></script>
+    <script defer src="~/hydro/alpine.js" asp-append-version="true"></script>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - OTEX</title>
+    <script type="importmap"></script>
+    @*Css*@
+    <link rel="stylesheet" href="~/css/app.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/Otex.Micros.Identity.Razor.styles.css" asp-append-version="true"/>
+    @await RenderSectionAsync("Styles", required: false)
+</head>
+<body dir="rtl">
+@RenderBody()
+@* <div id="global-hydro-loader" class="fixed inset-0 z-[9999] bg-black/40 backdrop-blur-sm flex-col justify-center items-center"> *@
+@* *@
+@*     <div class="w-12 h-12 border-4 border-white/30 border-t-blue-600 rounded-full animate-spin"></div> *@
+@*     <p class="text-white mt-4 font-bold">در حال پردازش...</p> *@
+@* </div> *@
+<script>
+    document.addEventListener('HydroLocation', (event) => {
+        console.log("کاربر به یک صفحه یا آدرس جدید منتقل شد!", event.detail);
+        // منطق شما در اینجا...
+    });
+
+    document.addEventListener('HydroComponentUpdate', (event) => {
+        console.log("DOM توسط سرور آپدیت شد. لودینگ ها تمام شده است.");
+    });
+    document.addEventListener('HydroComponentInit', (event) => {
+        console.log("HydroComponentInit");
+    });
+</script>
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
