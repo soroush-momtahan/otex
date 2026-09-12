@@ -4,16 +4,17 @@
         <TargetFramework>net10.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <ScopedCssEnabled>false</ScopedCssEnabled>
     </PropertyGroup>
     <ItemGroup>
         <ProjectReference Include="..\Otex.Micros.Identity.Infrastructure\Otex.Micros.Identity.Infrastructure.csproj" />
-        <ProjectReference Include="..\..\..\BuildingBlocks\Otex.BuildingBlocks.Razor\Otex.BuildingBlocks.Razor.csproj"/>
+        <ProjectReference Include="..\..\..\BuildingBlocks\Otex.BuildingBlocks.Razor\Otex.BuildingBlocks.Razor.csproj" />
     </ItemGroup>
     <ItemGroup>
       <PackageReference Include="Hydro" Version="1.3.0" />
+      <PackageReference Include="Vite.AspNetCore" Version="2.4.1" />
     </ItemGroup>
     <ItemGroup>
-      <Folder Include="Core\" />
       <Folder Include="wwwroot\css\" />
     </ItemGroup>
     <ItemGroup>
@@ -98,6 +99,9 @@
     <ItemGroup>
       <None Update="Features\SignOn\SignOn.cshtml.css">
         <DependentUpon>SignOn.cshtml</DependentUpon>
+      </None>
+      <None Update="Pages\SignOn\Components\StorySlider\StorySlider.cshtml.ts">
+        <DependentUpon>StorySlider.cshtml</DependentUpon>
       </None>
     </ItemGroup>
 

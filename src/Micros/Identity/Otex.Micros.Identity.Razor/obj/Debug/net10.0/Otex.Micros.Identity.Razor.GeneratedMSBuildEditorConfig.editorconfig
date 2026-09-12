@@ -76,6 +76,14 @@ build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2lnbk9uL0NvbXBvbmVudHMvU3Rv
 build_metadata.AdditionalFiles.CssScope = 
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Razor/Features/SignOn/SignOn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXMvU2lnbk9uL1NpZ25Pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Razor/Features/SignOn/Views/OtpVerify/OtpVerify.cshtml]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXMvU2lnbk9uL1ZpZXdzL090cFZlcmlmeS9PdHBWZXJpZnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Razor/Features/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -90,6 +98,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Razor/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Razor/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Razor/Pages/Shared/_ValidationScriptsPartial.cshtml]
@@ -107,11 +119,3 @@ build_metadata.AdditionalFiles.CssScope =
 [/home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Razor/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
-
-[/home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Razor/Features/SignOn/SignOn.cshtml]
-build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXMvU2lnbk9uL1NpZ25Pbi5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = b-ijbqfc46ew
-
-[/home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Razor/Pages/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-kf8wc5x490

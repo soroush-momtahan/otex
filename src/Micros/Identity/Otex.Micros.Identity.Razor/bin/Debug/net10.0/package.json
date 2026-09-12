@@ -2,20 +2,30 @@
   "name": "otex.micros.identity.razor",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.ts",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
     "build:css": "npx tailwindcss -i ./app.css -o ./wwwroot/css/app.css",
     "watch:css": "npx tailwindcss -i ./app.css -o ./wwwroot/css/app.css --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "dependencies": {
-    "@tailwindcss/cli": "^4.3.3",
-    "tailwindcss": "^4.3.3"
+    "@tailwindcss/cli": "^4.3.3"
   },
   "allowScripts": {
     "@parcel/watcher@2.5.1": true
+  },
+  "devDependencies": {
+    "@alpinejs/morph": "^3.17.2",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/alpinejs": "^3.13.11",
+    "alpinejs": "^3.17.2",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.2"
   }
 }

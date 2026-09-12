@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Otex.Micros.Identity.Migrator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+db4a17b1d19f28f9669119a920d7fa4cc369d951")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f5cccef71f0de21c429e7d2cdb3c242f1d93a1b0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Otex.Micros.Identity.Migrator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Otex.Micros.Identity.Migrator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

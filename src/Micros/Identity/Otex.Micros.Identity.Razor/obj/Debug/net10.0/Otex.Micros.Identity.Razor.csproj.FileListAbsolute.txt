@@ -258,17 +258,10 @@ C:/Users/Soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micr
 /home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Razor/obj/Debug/net10.0/rjimswa.dswa.cache.json
 /home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Razor/obj/Debug/net10.0/rjsmrazor.dswa.cache.json
 /home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Razor/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json
-/home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Razor/obj/Debug/net10.0/scopedcss/Features/SignOn/SignOn.cshtml.rz.scp.css
-/home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Razor/obj/Debug/net10.0/scopedcss/Pages/Shared/_Layout.cshtml.rz.scp.css
-/home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Razor/obj/Debug/net10.0/scopedcss/bundle/Otex.Micros.Identity.Razor.styles.css
-/home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Razor/obj/Debug/net10.0/scopedcss/projectbundle/Otex.Micros.Identity.Razor.bundle.scp.css
 /home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Razor/obj/Debug/net10.0/compressed/rca8d4jt70-{0}-bhht4od6sr-bhht4od6sr.gz
 /home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Razor/obj/Debug/net10.0/compressed/9bsfxiw91u-{0}-jao8anh8b9-jao8anh8b9.gz
 /home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Razor/obj/Debug/net10.0/compressed/iccxoteki7-{0}-85t42odcef-85t42odcef.gz
 /home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Razor/obj/Debug/net10.0/compressed/ounm4q99q4-{0}-stxr7qmg8n-stxr7qmg8n.gz
-/home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Razor/obj/Debug/net10.0/compressed/3o8s1q8a7y-{0}-uij2rmd30m-uij2rmd30m.gz
-/home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Razor/obj/Debug/net10.0/compressed/iy3mzbcytz-{0}-12z0lmj697-12z0lmj697.gz
-/home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Razor/obj/Debug/net10.0/compressed/op12xvaf3a-{0}-12z0lmj697-12z0lmj697.gz
 /home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Razor/obj/Debug/net10.0/staticwebassets.build.json
 /home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Razor/obj/Debug/net10.0/staticwebassets.build.json.cache
 /home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Razor/obj/Debug/net10.0/staticwebassets.development.json
@@ -280,3 +273,6 @@ C:/Users/Soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micr
 /home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Razor/obj/Debug/net10.0/Otex.Micros.Identity.Razor.pdb
 /home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Razor/obj/Debug/net10.0/Otex.Micros.Identity.Razor.genruntimeconfig.cache
 /home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Razor/obj/Debug/net10.0/ref/Otex.Micros.Identity.Razor.dll
+/home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Razor/bin/Debug/net10.0/tsconfig.json
+/home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Razor/bin/Debug/net10.0/Vite.AspNetCore.dll
+/home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Razor/obj/Debug/net10.0/compressed/3o8s1q8a7y-{0}-3r8b2a0bt1-3r8b2a0bt1.gz

@@ -1,0 +1,98 @@
+﻿@import "tailwindcss";
+
+@import "../wwwroot/fonts/font.css";
+
+/*@source "../Pages!**!*.cshtml";*/
+/*@source "../Pages!**!*.cs";*/
+/*@source "../Features!**!*.cshtml";*/
+/*@source "../Features!**!*.cs";*/
+/*@source "../Core!**!*.cshtml";*/
+/*@source "../Core!**!*.cs";*/
+
+/*@source "../Pages!**!*.js"; !* اگر کلاس‌های تایلویند را در JS می‌نویسی *!*/
+/*@source "../Core!**!*.js";*/
+/*@source "../Features!**!*.js";*/
+
+/* اسکن فایل‌های ویو برای پیدا کردن کلاس‌های تیلویند */
+@source "../Pages/**/*.cshtml";
+@source "../Features/**/*.cshtml";
+@source "../Core/**/*.cshtml";
+
+/* اسکن فایل‌های سی‌شارپ (در صورتی که کلاس‌های تیلویند را در TagHelper یا ViewComponent تولید می‌کنید) */
+@source "../Pages/**/*.cs";
+@source "../Features/**/*.cs";
+@source "../Core/**/*.cs";
+
+/* اسکن فایل‌های تایپ‌اسکریپت (چون از TS استفاده می‌کنید، این پسوند باید ts باشد) */
+@source "../Pages/**/*.ts";
+@source "../Features/**/*.ts";
+@source "../Core/**/*.ts";
+
+
+
+@theme{
+    /* تعریف خانواده فونت انجمن*/
+    --font-anjoman: 'Anjoman', sans-serif;
+    --font-iran: 'IRANSansFaNum', sans-serif;
+    --font-monoton: 'Monoton', Anjoman;
+    --font-marjor: 'marjor', Anjoman;
+    /* (اختیاری) اگر می‌خواهید انجمن فونت پیش‌فرض کل سایت شود این خط را هم اضافه کنید*/
+    --font-sans: 'Anjoman', 'IRANSansFaNum', ui-sans-serif, system-ui, sans-serif;
+
+    /* تولید کلاس برای وزن‌های اختصاصی که تیلویند به صورت پیش‌فرض ندارد*/
+    --font-weight-ultrabold: 850;
+    --font-weight-heavy: 950;
+    --font-weight-superheavy: 1000;
+
+    --color-porcelain-50: #fcf7e8;
+    --color-porcelain-100: #f9eed2;
+    --color-porcelain-200: #f4dda4;
+    --color-porcelain-300: #eecc77;
+    --color-porcelain-400: #e9bb49;
+    --color-porcelain-500: #e3ab1c;
+    --color-porcelain-600: #b68816;
+    --color-porcelain-700: #886611;
+    --color-porcelain-800: #5b440b;
+    --color-porcelain-900: #2d2206;
+    --color-porcelain-950: #201804;
+
+    --text-2xs: 10px;
+    --text-2xs--line-height: 14px;
+    --breakpoint-xxs: 20rem;
+    --breakpoint-sm: 41.25rem;
+    --breakpoint-xs: 24rem;
+}
+
+/* وقتی دکمه در حال ارسال درخواست است، متن مخفی و لودینگ نمایان می‌شود*/
+.hydro-request button[type="submit"] .normal-state { display: none; }
+.hydro-request button[type="submit"] .loading-state { display: flex; }
+
+button[disabled].hydro-request .normal-state { display: none; }
+button[disabled].hydro-request .loading-state { display: flex; }
+
+/* هر فرمی که در حال ارسال درخواست به Hydro است*/
+form.hydro-request button {
+    pointer-events: none; /* جلوگیری قطعی از کلیک مجدد کاربر*/
+    opacity: 0.65; /* کم‌رنگ کردن دکمه تا کاربر متوجه شود غیرفعال است*/
+    cursor: not-allowed;
+}
+
+body:has(button.hydro-request) button{
+    pointer-events: none; /* جلوگیری قطعی از کلیک مجدد کاربر*/
+    opacity: 0.65; /* کم‌رنگ کردن دکمه تا کاربر متوجه شود غیرفعال است*/
+    cursor: not-allowed;
+}
+
+
+
+/* لودینگ در حالت عادی کاملا مخفی است*/
+#global-hydro-loader {
+    display: none;
+}
+
+/* جادوی CSS:
+اگر بادی شامل عنصری با کلاس hydro-request بود،
+لودینگ را از حالت مخفی به flex تغییر بده تا تمام صفحه را بگیرد */
+body:has(.hydro-request) #global-hydro-loader {
+    display: flex;
+}

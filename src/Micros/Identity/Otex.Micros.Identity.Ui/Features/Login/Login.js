@@ -108,7 +108,7 @@ class Login {
     init() {
         this.startTimer();
         this.$nextTick(() => {
-            this.focusInput(0);
+            this.focusInputTransformer(0);
         });
     }
 
@@ -148,7 +148,7 @@ class Login {
         }
 
         if (val && index < 5) {
-            this.focusInput(index + 1);
+            this.focusInputTransformer(index + 1);
         }
 
         if (this.digits.every(d => d !== '')) {
@@ -162,7 +162,7 @@ class Login {
     handleBackspace(index, event) {
         if (!this.digits[index] && index > 0) {
             this.digits[index - 1] = '';
-            this.focusInput(index - 1);
+            this.focusInputTransformer(index - 1);
         }
     }
 
@@ -174,7 +174,7 @@ class Login {
                 this.digits[i] = pastedData[i];
             }
             const focusIndex = pastedData.length < 6 ? pastedData.length : 5;
-            this.focusInput(focusIndex);
+            this.focusInputTransformer(focusIndex);
 
             if (this.digits.every(d => d !== '')) {
                 setTimeout(() => this.$refs.autoSubmitBtn.click(), 300);

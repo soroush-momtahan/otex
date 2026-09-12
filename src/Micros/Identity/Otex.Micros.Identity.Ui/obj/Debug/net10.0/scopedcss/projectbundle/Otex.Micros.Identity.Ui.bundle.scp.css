@@ -1,20 +1,20 @@
 /* /Pages/Account/Login/Index.cshtml.rz.scp.css */
-@keyframes story-fill-b-zo205bnbpr {
+@keyframes story-fill-b-mbwzebr4pq {
     0% { width: 0%; }
     100% { width: 100%; }
 }
 
-.animate-story[b-zo205bnbpr] {
-    animation: story-fill-b-zo205bnbpr 4s linear forwards;
+.animate-story[b-mbwzebr4pq] {
+    animation: story-fill-b-mbwzebr4pq 4s linear forwards;
 }
 
-@keyframes fade-in-up-b-zo205bnbpr {
+@keyframes fade-in-up-b-mbwzebr4pq {
     0% { opacity: 0; transform: translateY(20px) scale(0.95); }
     100% { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-.animate-fade-in-up[b-zo205bnbpr] {
-    animation: fade-in-up-b-zo205bnbpr 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+.animate-fade-in-up[b-mbwzebr4pq] {
+    animation: fade-in-up-b-mbwzebr4pq 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 /* /Pages/Shared/_Layout.cshtml.rz.scp.css */
 /* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification

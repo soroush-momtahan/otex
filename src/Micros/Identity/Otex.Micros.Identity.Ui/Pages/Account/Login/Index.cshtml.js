@@ -153,7 +153,7 @@ document.addEventListener('alpine:init', () => {
             return `${m}:${s}`;
         },
 
-        handleInput(index, event) {
+        onInput(index, event) {
             const val = event.target.value;
             // فقط اعداد مجاز هستند
             if (!/^[0-9]$/.test(val)) {
@@ -175,7 +175,7 @@ document.addEventListener('alpine:init', () => {
             }
         },
 
-        handleBackspace(index, event) {
+        onBackspace(index, event) {
             // اگر باکس خالی بود و بک‌اسپیس زده شد، برو به باکس قبلی
             if (!this.digits[index] && index > 0) {
                 this.digits[index - 1] = '';
@@ -183,7 +183,7 @@ document.addEventListener('alpine:init', () => {
             }
         },
 
-        handlePaste(event) {
+        onPaste(event) {
             event.preventDefault();
             const pastedData = event.clipboardData.getData('text').slice(0, 6).split('');
             if (pastedData.length > 0 && pastedData.every(char => /^[0-9]$/.test(char))) {

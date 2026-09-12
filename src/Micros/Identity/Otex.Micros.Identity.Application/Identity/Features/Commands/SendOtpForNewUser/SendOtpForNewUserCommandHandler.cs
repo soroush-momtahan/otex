@@ -13,9 +13,9 @@ internal sealed class SendOtpForNewUserCommandHandler(
     public async Task<Result<SendOtpForNewUserResult>> Handle(SendOtpForNewUserCommand command, CancellationToken cancellationToken)
     {
         User? user = await identityRepository.FindByMobileAsync(command.Mobile, cancellationToken);
-        if (user is null)
+        if (user is not null)
         {
-            return new SendOtpForNewUserResult(false);
+            return new SendOtpForNewUserResult(true);
         }
 
         Result sendOtpOrError = await otpService.SendOtpAsync(command.Mobile, cancellationToken);
@@ -24,6 +24,6 @@ internal sealed class SendOtpForNewUserCommandHandler(
             return Result.Failure<SendOtpForNewUserResult>(sendOtpOrError.Error);
         }
         
-        return new SendOtpForNewUserResult(true);
+        return new SendOtpForNewUserResult(false);
     }
 }

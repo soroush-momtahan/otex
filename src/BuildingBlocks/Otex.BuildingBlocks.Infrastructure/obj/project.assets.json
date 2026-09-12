@@ -6319,6 +6319,7 @@
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
             "/home/soroush/Documents/Code/01 - projects/otex/src/BuildingBlocks/Otex.BuildingBlocks.Application/Otex.BuildingBlocks.Application.csproj": {
@@ -6344,6 +6345,7 @@
     },
     "frameworks": {
       "net10.0": {
+        "framework": "net10.0",
         "targetAlias": "net10.0",
         "dependencies": {
           "Aspire.Npgsql.EntityFrameworkCore.PostgreSQL": {

@@ -1,9 +1,11 @@
 ﻿using Hydro;
 using MediatR;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Otex.BuildingBlocks.Domain.Errors;
 using Otex.BuildingBlocks.Domain.Results;
 using Otex.BuildingBlocks.Razor.Extensions;
 using Otex.Micros.Identity.Application.Identity.Features.Commands.SendOtpForNewUser;
+using Otex.Micros.Identity.Application.Identity.Features.Commands.VerifyMobile;
 using Otex.Micros.Identity.Razor.Features.SignOn.Enums;
 
 namespace Otex.Micros.Identity.Razor.Features.SignOn;
@@ -20,6 +22,7 @@ public record SignOnInputModel(
 public record SignOnViewModel(
     SignOnStep? CurrentStep,
     SignOnStep? PreviousStep,
+    string? TempToken,
     bool IsExistingUser,
     List<Error> Errors)
 {
@@ -33,12 +36,12 @@ public class SignOn : HydroComponent
     public SignOn(ISender sender)
     {
         _sender = sender;
-        Console.WriteLine("Hello World!");
     }
 
     public SignOnViewModel ViewModel { get; set; } = new(
         SignOnStep.InsertMobileNumber,
         SignOnStep.InsertMobileNumber,
+        string.Empty,
         false,
         []);
 
@@ -55,34 +58,65 @@ public class SignOn : HydroComponent
     {
         Console.WriteLine("Helllllo");
         ViewModel = ViewModel with { Errors = [] };
-        // ViewModel = ViewModel with { CurrentStep = SignOnStep.SetPassword };
         if (ViewModel.CurrentStep == SignOnStep.InsertMobileNumber)
         {
-            Result<SendOtpForNewUserResult> mobileExistenceOrError =
-                await _sender.Send(new SendOtpForNewUserCommand(InputModel.Mobile!));
+            await InsertMobileNumberStep();
+        }
 
-            if (mobileExistenceOrError.IsFailure)
+        else if (ViewModel.CurrentStep == SignOnStep.OtpVerify)
+        {
+           Result<VerifyMobileResult> verifyMobileOrError = await _sender.Send(
+               new VerifyMobileCommand(InputModel.OtpCode!, InputModel.Mobile!));
+           if (verifyMobileOrError.IsFailure)
+           {
+               ViewModel = ViewModel with
+               {
+                   Errors = verifyMobileOrError.GetErrors(),
+                   CurrentStep = SignOnStep.OtpVerify,
+                   PreviousStep = SignOnStep.InsertMobileNumber
+               };
+           }
+           else if (ViewModel.IsExistingUser)
+           {
+               
+           }
+           else
+           {
+               ViewModel = ViewModel with
+               {
+                   CurrentStep = SignOnStep.SetPassword,
+                   PreviousStep = SignOnStep.InsertMobileNumber
+               };
+           }
+           
+        }
+    }
+
+    private async Task InsertMobileNumberStep()
+    {
+        Result<SendOtpForNewUserResult> mobileExistenceOrError =
+            await _sender.Send(new SendOtpForNewUserCommand(InputModel.Mobile!));
+
+        if (mobileExistenceOrError.IsFailure)
+        {
+            List<Error> errors = mobileExistenceOrError.GetErrors();
+            ViewModel = ViewModel with { Errors = errors };
+        }
+        else if (mobileExistenceOrError.Value.IsUserExist)
+        {
+            ViewModel = ViewModel with
             {
-                List<Error> errors = mobileExistenceOrError.GetErrors();
-                ViewModel = ViewModel with { Errors = errors };
-                // ViewModel.Errors.AddRange(errors);
-            }
-            else if (mobileExistenceOrError.Value.IsUserExist)
+                IsExistingUser = true,
+                CurrentStep = SignOnStep.VerifyMethod
+            };
+        }
+        else
+        {
+            ViewModel = ViewModel with
             {
-                ViewModel = ViewModel with
-                {
-                    IsExistingUser = true,
-                    CurrentStep = SignOnStep.VerifyMethod
-                };
-            }
-            else
-            {
-                ViewModel = ViewModel with
-                {
-                    IsExistingUser = false,
-                    CurrentStep = SignOnStep.SetPassword
-                };
-            }
+                IsExistingUser = false,
+                CurrentStep = SignOnStep.OtpVerify
+            };
         }
     }
 

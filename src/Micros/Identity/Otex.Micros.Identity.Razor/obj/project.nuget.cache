@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "HgNocw8V4ww=",
+  "dgSpecHash": "MiUS9NdR0ZQ=",
   "success": true,
   "projectFilePath": "/home/soroush/Documents/Code/01 - projects/otex/src/Micros/Identity/Otex.Micros.Identity.Razor/Otex.Micros.Identity.Razor.csproj",
   "expectedPackageFiles": [
@@ -82,7 +82,8 @@
     "/home/soroush/.nuget/packages/serilog.sinks.file/7.0.0/serilog.sinks.file.7.0.0.nupkg.sha512",
     "/home/soroush/.nuget/packages/stackexchange.redis/2.13.1/stackexchange.redis.2.13.1.nupkg.sha512",
     "/home/soroush/.nuget/packages/system.identitymodel.tokens.jwt/8.0.1/system.identitymodel.tokens.jwt.8.0.1.nupkg.sha512",
-    "/home/soroush/.nuget/packages/system.io.hashing/10.0.8/system.io.hashing.10.0.8.nupkg.sha512"
+    "/home/soroush/.nuget/packages/system.io.hashing/10.0.8/system.io.hashing.10.0.8.nupkg.sha512",
+    "/home/soroush/.nuget/packages/vite.aspnetcore/2.4.1/vite.aspnetcore.2.4.1.nupkg.sha512"
   ],
   "logs": []
 }

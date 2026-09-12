@@ -4460,6 +4460,7 @@
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
             "/home/soroush/Documents/Code/01 - projects/otex/src/BuildingBlocks/Otex.BuildingBlocks.Infrastructure/Otex.BuildingBlocks.Infrastructure.csproj": {
@@ -4482,6 +4483,7 @@
     },
     "frameworks": {
       "net10.0": {
+        "framework": "net10.0",
         "targetAlias": "net10.0",
         "dependencies": {
           "Htmx.TagHelpers": {
